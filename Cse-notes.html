@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSE Notes | PS CSE HUB</title>
+
+<meta name="description" content="CSE Notes for Computer Science and Engineering students - PS CSE HUB.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    background:#050d18;
+    border-bottom:1px solid #193451;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#39a7ff;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.nav a{
+    color:#d5e4f2;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+.nav a:hover{
+    color:#39a7ff;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:radial-gradient(circle at top,#124477,#07111f 65%);
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#b8c9da;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 20px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:35px;
+}
+
+.title p{
+    color:#93a7ba;
+    margin-top:8px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#0c1b2d;
+    border:1px solid #1c3855;
+    border-radius:18px;
+    padding:28px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#1688ff;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#4db2ff;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#b5c5d5;
+}
+
+.topic{
+    margin-top:45px;
+    background:#091827;
+    border:1px solid #1c3855;
+    border-radius:18px;
+    padding:30px;
+}
+
+.topic h2{
+    color:#4db2ff;
+    margin-bottom:15px;
+}
+
+.topic h3{
+    color:#82caff;
+    margin-top:20px;
+}
+
+.topic p,
+.topic li{
+    color:#b9c8d7;
+}
+
+.topic ul{
+    padding-left:22px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:11px 23px;
+    border-radius:25px;
+    background:#1688ff;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#39a7ff;
+}
+
+footer{
+    background:#030912;
+    text-align:center;
+    padding:30px 20px;
+    color:#8192a6;
+}
+
+footer strong{
+    color:#39a7ff;
+}
+
+@media(max-width:650px){
+
+    .nav{
+        flex-direction:column;
+       
