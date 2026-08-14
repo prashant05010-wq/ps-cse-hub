@@ -399,7 +399,134 @@ int main()
 ← Back to PS CSE HUB
 </a>
 
-</main>
+<section class="lesson">
+
+<h2>8. Important C Programs</h2>
+
+<h3>Program 1: Add Two Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b, sum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 2: Check Even or Odd</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    if(n % 2 == 0)
+        printf("Even number");
+    else
+        printf("Odd number");
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 3: Find Largest of Two Numbers</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &amp;a, &amp;b);
+
+    if(a &gt; b)
+        printf("%d is largest", a);
+    else
+        printf("%d is largest", b);
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 4: Multiplication Table</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 5: Calculate Grade</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks;
+
+    printf("Enter marks: ");
+    scanf("%d", &amp;marks);
+
+    if(marks &gt;= 75)
+        printf("Grade A");
+    else if(marks &gt;= 60)
+        printf("Grade B");
+    else
+        printf("Grade C");
+
+    return 0;
+}</code></pre>
+
+
+<h3>Program 6: Factorial of a Number</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int n, i;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    for(i = 1; i &lt;= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    printf("Factorial = %lld", fact);
+
+    return 0;
+}</code></pre>
+
+    </section></main>
 
 
 <footer>
