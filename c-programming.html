@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C Programming | PS CSE HUB</title>
+
+<meta name="description"
+content="Learn C Programming from basics with PS CSE HUB.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    background:#050d18;
+    border-bottom:1px solid #193451;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#39a7ff;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.nav a{
+    color:#d5e4f2;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+.nav a:hover{
+    color:#39a7ff;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:radial-gradient(circle at top,#124477,#07111f 65%);
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#b8c9da;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.lesson{
+    background:#0c1b2d;
+    border:1px solid #1c3855;
+    border-radius:16px;
+    padding:28px;
+    margin-bottom:25px;
+}
+
+.lesson h2{
+    color:#4db2ff;
+    margin-bottom:12px;
+}
+
+.lesson h3{
+    color:#82caff;
+    margin:18px 0 8px;
+}
+
+.lesson p,
+.lesson li{
+    color:#c0cedb;
+}
+
+.lesson ul{
+    padding-left:22px;
+}
+
+pre{
+    background:#020810;
+    border:1px solid #1c3855;
+    border-radius:10px;
+    padding:18px;
+    overflow-x:auto;
+    margin-top:15px;
+}
+
+code{
+    color:#8ed1ff;
+    font-family:Consolas,monospace;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:11px 22px;
+    border-radius:25px;
+    background:#1688ff;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    background:#030912;
+    padding:25px;
+    color:#8293a6;
+}
+
+footer strong{
+    color:#39a7ff;
+}
+
+@media(max-width:600px){
+
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav a{
+        margin:0 6px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .lesson{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">
+PS <span>CSE HUB</span>
+</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#lessons">Lessons</a>
+</div>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>C <span>Programming</span></h1>
+
+<p>
+Learn C Programming from the basics with simple explanations
+and practical programs.
+</p>
+
+</section>
+
+
+<main class="container" id="lessons">
+
+
+<div class="lesson">
+
+<h2>1. Introduction to C</h2>
+
+<p>
+C is a general-purpose programming language.
+It is widely used for learning programming fundamentals,
+system programming and many other applications.
+</p>
+
+<h3>Why learn C?</h3>
+
+<ul>
+<li>Easy to understand programming fundamentals</li>
+<li>Fast and efficient</li>
+<li>Useful for learning data structures</li>
+<li>Helps build strong programming logic</li>
+</ul>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>2. Your First C Program</h2>
+
+<p>
+The classic first program prints "Hello World".
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}</code></pre>
+
+<h3>Important parts</h3>
+
+<ul>
+<li><b>#include &lt;stdio.h&gt;</b> → provides input/output functions.</li>
+<li><b>main()</b> → execution starts here.</li>
+<li><b>printf()</b> → displays output.</li>
+<li><b>return 0;</b> → ends the program successfully.</li>
+</ul>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>3. Variables & Data Types</h2>
+
+<p>
+Variables store data in a program.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age = 18;
+    float marks = 85.5;
+    char grade = 'A';
+
+    printf("%d\n", age);
+    printf("%.2f\n", marks);
+    printf("%c\n", grade);
+
+    return 0;
+}</code></pre>
+
+<h3>Common data types</h3>
+
+<ul>
+<li>int → Integer numbers</li>
+<li>float → Decimal numbers</li>
+<li>char → Single character</li>
+<li>double → Larger decimal values</li>
+</ul>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>4. Taking Input</h2>
+
+<p>
+The <b>scanf()</b> function is commonly used to take input.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;number);
+
+    printf("You entered: %d", number);
+
+    return 0;
+}</code></pre>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>5. If-Else</h2>
+
+<p>
+If-else is used when a program needs to make a decision.
+</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &amp;age);
+
+    if(age >= 18)
+    {
+        printf("You are eligible.");
+    }
+    else
+    {
+        printf("You are not eligible.");
+    }
+
+    return 0;
+}</code></pre>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>6. Loops</h2>
+
+<p>
+Loops are used to repeat a block of code.
+</p>
+
+<h3>For Loop Example</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int i;
+
+    for(i = 1; i &lt;= 10; i++)
+    {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}</code></pre>
+
+</div>
+
+
+<div class="lesson">
+
+<h2>7. Practice Programs</h2>
+
+<ul>
+<li>Print Hello World</li>
+<li>Add two numbers</li>
+<li>Find even or odd number</li>
+<li>Find largest of two numbers</li>
+<li>Print multiplication table</li>
+<li>Calculate percentage</li>
+<li>Find factorial</li>
+<li>Reverse a number</li>
+</ul>
+
+</div>
+
+
+<a href="index.html" class="btn">
+← Back to PS CSE HUB
+</a>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 <strong>PS CSE HUB</strong>
+</p>
+
+<p>
+Created by PS • Learn • Code • Build 🚀
+</p>
+
+</footer>
+
+</body>
+</html>
