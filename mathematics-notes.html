@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Engineering Mathematics | PS CSE HUB</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#07111f;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    background:#050d18;
+    padding:18px 20px;
+    border-bottom:1px solid #24415f;
+}
+
+.nav{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#39a7ff;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.nav a{
+    color:#d5e4f2;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:radial-gradient(circle at top,#124477,#07111f 65%);
+}
+
+.hero h1{
+    font-size:43px;
+    margin:0 0 10px;
+}
+
+.hero h1 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    color:#b8c9da;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.topic{
+    background:#0c1b2d;
+    border:1px solid #24415f;
+    border-radius:16px;
+    padding:27px;
+    margin-bottom:25px;
+}
+
+.topic h2{
+    color:#4db2ff;
+}
+
+.topic h3{
+    color:#82caff;
+    margin-top:20px;
+}
+
+.topic p,
+.topic li{
+    color:#c3cfdb;
+}
+
+.topic ul,
+.topic ol{
+    padding-left:25px;
+}
+
+.formula{
+    background:#020811;
+    border:1px solid #203c59;
+    border-radius:10px;
+    padding:18px;
+    overflow-x:auto;
+    color:#d8e8f5;
+    font-family:monospace;
+}
+
+.question{
+    background:#07111f;
+    border-left:4px solid #1688ff;
+    padding:15px;
+    margin-top:15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:11px 23px;
+    background:#1688ff;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
+
+.back{
+    text-align:center;
+    margin:40px 0;
+}
+
+footer{
+    background:#030912;
+    text-align:center;
+    padding:30px;
+    color:#8192a6;
+}
+
+footer strong{
+    color:#39a7ff;
+}
+
+@media(max-width:600px){
+
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .topic{
+        padding:21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+PS <span>CSE HUB</span>
+</div>
+
+<a href="cse-notes.html">← CSE Notes</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+Engineering <span>Mathematics</span>
+</h1>
+
+<p>
+Important mathematics concepts and formulas for BTech CSE students.
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="topic">
+
+<h2>1. Matrices</h2>
+
+<p>
+A matrix is a rectangular arrangement of numbers or elements
+in rows and columns.
+</p>
+
+<h3>Example</h3>
+
+<div class="formula">
+A = [ 1  2
+      3  4 ]
+</div>
+
+<p>
+The matrix above has 2 rows and 2 columns, so its order is
+2 × 2.
+</p>
+
+<h3>Important Types</h3>
+
+<ul>
+<li>Row Matrix</li>
+<li>Column Matrix</li>
+<li>Square Matrix</li>
+<li>Diagonal Matrix</li>
+<li>Identity Matrix</li>
+<li>Zero Matrix</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>2. Determinants</h2>
+
+<p>
+A determinant is a scalar value associated with a square matrix.
+</p>
+
+<h3>For a 2 × 2 Matrix</h3>
+
+<div class="formula">
+| a  b |
+| c  d |
+
+Determinant = ad - bc
+</div>
+
+<div class="question">
+<strong>Example:</strong><br>
+For | 2  3 |<br>
+&nbsp;&nbsp;&nbsp;&nbsp;| 1  4 |<br><br>
+Determinant = (2 × 4) - (3 × 1) = 5
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>3. Limits</h2>
+
+<p>
+A limit describes the value that a function approaches
+as the input approaches a particular value.
+</p>
+
+<div class="formula">
+lim x→a f(x)
+</div>
+
+<p>
+Limits are an important foundation for calculus.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h2>4. Differentiation</h2>
+
+<p>
+Differentiation is used to find the rate of change of a function.
+</p>
+
+<h3>Basic Formulas</h3>
+
+<div class="formula">
+d/dx (xⁿ) = n xⁿ⁻¹
+
+d/dx (sin x) = cos x
+
+d/dx (cos x) = -sin x
+
+d/dx (eˣ) = eˣ
+
+d/dx (ln x) = 1/x
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>5. Integration</h2>
+
+<p>
+Integration is the reverse process of differentiation and is
+used to calculate areas and many other quantities.
+</p>
+
+<h3>Basic Formulas</h3>
+
+<div class="formula">
+∫ xⁿ dx = xⁿ⁺¹/(n+1) + C
+
+∫ 1/x dx = ln|x| + C
+
+∫ sin x dx = -cos x + C
+
+∫ cos x dx = sin x + C
+
+∫ eˣ dx = eˣ + C
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>6. Differential Equations</h2>
+
+<p>
+A differential equation is an equation involving a function
+and one or more of its derivatives.
+</p>
+
+<h3>Example</h3>
+
+<div class="formula">
+dy/dx = 2x
+</div>
+
+<p>
+Integrating both sides gives:
+
+</p>
+
+<div class="formula">
+y = x² + C
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>7. Vector Basics</h2>
+
+<p>
+A vector is a quantity that has both magnitude and direction.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>Velocity</li>
+<li>Force</li>
+<li>Displacement</li>
+<li>Acceleration</li>
+</ul>
+
+<h3>Vector Form</h3>
+
+<div class="formula">
+A = ai + bj + ck
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>8. Important Mathematics Formulas</h2>
+
+<div class="formula">
+(a + b)² = a² + 2ab + b²
+
+(a - b)² = a² - 2ab + b²
+
+a² - b² = (a-b)(a+b)
+
+sin²x + cos²x = 1
+
+1 + tan²x = sec²x
+
+1 + cot²x = cosec²x
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>9. Practice Questions</h2>
+
+<ol>
+
+<li>Find the determinant of a 2 × 2 matrix.</li>
+
+<li>Find the derivative of x³ + 2x² + 5.</li>
+
+<li>Integrate 3x² + 4x.</li>
+
+<li>Solve a simple first-order differential equation.</li>
+
+<li>Find the order of a given matrix.</li>
+
+<li>Evaluate basic limits.</li>
+
+<li>Simplify trigonometric identities.</li>
+
+<li>Find the magnitude of a vector.</li>
+
+</ol>
+
+</div>
+
+
+<div class="back">
+
+<a href="cse-notes.html" class="btn">
+← Back to CSE Notes
+</a>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>© 2026 <strong>PS CSE HUB</strong></p>
+
+<p>Created by PS • Learn • Code • Build 🚀</p>
+
+</footer>
+
+</body>
+  </html>
