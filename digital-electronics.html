@@ -7,102 +7,50 @@
 <title>Digital Electronics | PS CSE HUB</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
     margin:0;
     font-family:Arial,sans-serif;
     background:#07111f;
     color:white;
-    line-height:1.7;
+    line-height:1.6;
 }
 
 header{
     background:#050d18;
-    padding:18px 20px;
+    padding:25px 15px;
+    text-align:center;
     border-bottom:1px solid #24415f;
 }
 
-.nav{
-    max-width:1000px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
+header h1{
     color:#39a7ff;
-    font-size:23px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:white;
-}
-
-.nav a{
-    color:#d5e4f2;
-    text-decoration:none;
-}
-
-.hero{
-    text-align:center;
-    padding:60px 20px;
-    background:radial-gradient(circle at top,#124477,#07111f 65%);
-}
-
-.hero h1{
-    font-size:43px;
-    margin:0 0 10px;
-}
-
-.hero h1 span{
-    color:#39a7ff;
-}
-
-.hero p{
-    color:#b8c9da;
 }
 
 .container{
-    max-width:950px;
+    max-width:900px;
     margin:auto;
-    padding:40px 20px;
+    padding:25px 15px;
 }
 
-.topic{
+.card{
     background:#0c1b2d;
     border:1px solid #24415f;
-    border-radius:16px;
-    padding:27px;
-    margin-bottom:25px;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
 }
 
-.topic h2{
+.card h2{
     color:#4db2ff;
 }
 
-.topic h3{
+.card h3{
     color:#82caff;
-    margin-top:20px;
 }
 
-.topic p,
-.topic li{
-    color:#c3cfdb;
-}
-
-.topic ul,
-.topic ol{
-    padding-left:25px;
-}
-
-.table-wrap{
-    overflow-x:auto;
+.card p,
+.card li{
+    color:#c7d3df;
 }
 
 table{
@@ -113,143 +61,408 @@ table{
 
 th,td{
     border:1px solid #31506d;
-    padding:12px;
+    padding:10px;
     text-align:center;
 }
 
 th{
     background:#12304d;
-    color:#fff;
-}
-
-td{
-    color:#c9d6e2;
-}
-
-.formula{
-    background:#020811;
-    border:1px solid #203c59;
-    border-radius:10px;
-    padding:18px;
-    overflow-x:auto;
-    color:#d8e8f5;
-    font-family:monospace;
-}
-
-.question{
-    background:#07111f;
-    border-left:4px solid #1688ff;
-    padding:15px;
-    margin-top:15px;
 }
 
 .btn{
     display:inline-block;
-    padding:11px 23px;
+    margin-top:15px;
+    padding:11px 20px;
     background:#1688ff;
     color:white;
     text-decoration:none;
     border-radius:25px;
 }
 
-.back{
-    text-align:center;
-    margin:40px 0;
-}
-
 footer{
-    background:#030912;
     text-align:center;
     padding:30px;
     color:#8192a6;
 }
-
-footer strong{
-    color:#39a7ff;
-}
-
-@media(max-width:600px){
-
-    .nav{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .topic{
-        padding:21px;
-    }
-}
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="nav">
+<h1>⚡ Digital Electronics</h1>
 
-<div class="logo">
-PS <span>CSE HUB</span>
-</div>
-
-<a href="cse-notes.html">← CSE Notes</a>
-
-</div>
+<p>PS CSE HUB</p>
 
 </header>
 
 
-<section class="hero">
-
-<h1>
-Digital <span>Electronics</span>
-</h1>
-
-<p>
-Simple and exam-friendly digital electronics notes for CSE students.
-</p>
-
-</section>
+<div class="container">
 
 
-<main class="container">
-
-
-<div class="topic">
+<div class="card">
 
 <h2>1. What is Digital Electronics?</h2>
 
 <p>
-Digital electronics deals with electronic systems that use
-discrete values, usually represented by binary digits 0 and 1.
+Digital electronics is the branch of electronics that works
+with discrete values, mainly binary 0 and 1.
+Digital circuits are used in computers, mobile phones,
+calculators and many other electronic devices.
 </p>
 
-<div class="question">
-<strong>Digital system:</strong> Information is represented using
-binary values 0 and 1.
-</div>
-
 </div>
 
 
-<div class="topic">
+<div class="card">
 
 <h2>2. Number Systems</h2>
 
 <p>
-A number system is a method of representing numbers.
-Computers and digital systems commonly use different number systems.
+Number systems are methods used to represent numbers.
 </p>
 
 <ul>
-<li><strong>Binary:</strong> Base 2</li>
-<li><strong>Octal:</strong> Base 8</li>
-<li><strong>Decimal:</strong> Base 10</li>
-<li><strong>Hexadecimal:</strong> Base 16</li>
+<li>Binary — Base 2</li>
+<li>Octal — Base 8</li>
+<li>Decimal — Base 10</li>
+<li>Hexadecimal — Base 16</li>
 </ul>
 
-<div class="question
+<p>
+Example: Binary 1010 = Decimal 10
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>3. Logic Gates</h2>
+
+<p>
+Logic gates are the basic building blocks of digital circuits.
+</p>
+
+<ul>
+<li>AND Gate</li>
+<li>OR Gate</li>
+<li>NOT Gate</li>
+<li>NAND Gate</li>
+<li>NOR Gate</li>
+<li>XOR Gate</li>
+<li>XNOR Gate</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>4. AND Gate Truth Table</h2>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Output</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+<p>
+AND gate gives output 1 only when both inputs are 1.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>5. OR Gate Truth Table</h2>
+
+<table>
+
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Output</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+
+</table>
+
+<p>
+OR gate gives output 1 when at least one input is 1.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>6. NOT Gate</h2>
+
+<p>
+NOT gate has one input and produces the opposite output.
+</p>
+
+<table>
+
+<tr>
+<th>Input</th>
+<th>Output</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>7. Boolean Algebra</h2>
+
+<p>
+Boolean algebra is used to represent and simplify
+logic expressions.
+</p>
+
+<ul>
+<li>A + 0 = A</li>
+<li>A · 1 = A</li>
+<li>A + 1 = 1</li>
+<li>A · 0 = 0</li>
+<li>A + A = A</li>
+<li>A · A = A</li>
+<li>A + A' = 1</li>
+<li>A · A' = 0</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>8. De Morgan's Theorems</h2>
+
+<p>
+De Morgan's theorems are important Boolean algebra rules.
+</p>
+
+<h3>First Theorem</h3>
+
+<p>
+(A · B)' = A' + B'
+</p>
+
+<h3>Second Theorem</h3>
+
+<p>
+(A + B)' = A' · B'
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>9. Combinational Circuits</h2>
+
+<p>
+The output of a combinational circuit depends on the
+present input values.
+</p>
+
+<ul>
+<li>Half Adder</li>
+<li>Full Adder</li>
+<li>Half Subtractor</li>
+<li>Full Subtractor</li>
+<li>Multiplexer</li>
+<li>Demultiplexer</li>
+<li>Encoder</li>
+<li>Decoder</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>10. Sequential Circuits</h2>
+
+<p>
+Sequential circuit output depends on present inputs
+and previous states.
+</p>
+
+<ul>
+<li>Flip-Flops</li>
+<li>Registers</li>
+<li>Counters</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>11. Flip-Flops</h2>
+
+<p>
+A flip-flop is a basic memory element capable of storing
+one bit of information.
+</p>
+
+<ul>
+<li>SR Flip-Flop</li>
+<li>JK Flip-Flop</li>
+<li>D Flip-Flop</li>
+<li>T Flip-Flop</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>12. Counters</h2>
+
+<p>
+Counters are sequential circuits used to count pulses
+or events.
+</p>
+
+<ul>
+<li>Up Counter</li>
+<li>Down Counter</li>
+<li>Up-Down Counter</li>
+<li>Synchronous Counter</li>
+<li>Asynchronous Counter</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>13. Registers</h2>
+
+<p>
+A register is a group of flip-flops used to store
+multiple bits of information.
+</p>
+
+<ul>
+<li>SISO</li>
+<li>SIPO</li>
+<li>PISO</li>
+<li>PIPO</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>14. Important Exam Questions</h2>
+
+<ol>
+<li>What is digital electronics?</li>
+<li>Explain different number systems.</li>
+<li>What are logic gates?</li>
+<li>Explain AND, OR and NOT gates.</li>
+<li>What is Boolean algebra?</li>
+<li>Explain De Morgan's theorems.</li>
+<li>What are combinational circuits?</li>
+<li>What are sequential circuits?</li>
+<li>Explain different types of flip-flops.</li>
+<li>What are counters and registers?</li>
+</ol>
+
+</div>
+
+
+<div style="text-align:center;margin:35px 0;">
+
+<a href="cse-notes.html" class="btn">
+← Back to CSE Notes
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 PS CSE HUB</p>
+
+<p>Created by PS • Learn • Code • Build 🚀</p>
+
+</footer>
+
+</body>
+    </html>
