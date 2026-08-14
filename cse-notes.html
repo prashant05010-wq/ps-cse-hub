@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CSE Notes | PS CSE HUB</title>
+<title>Computer Fundamentals | PS CSE HUB</title>
 
 <style>
 
 *{
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -17,31 +18,58 @@ body{
     font-family:Arial,sans-serif;
     background:#07111f;
     color:white;
+    line-height:1.7;
 }
 
 header{
     background:#050d18;
-    padding:20px;
-    text-align:center;
+    padding:18px 20px;
     border-bottom:1px solid #24415f;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
-header h1{
-    margin:0;
+.nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#39a7ff;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+nav a{
+    color:#d5e4f2;
+    text-decoration:none;
+    margin-left:18px;
+}
+
+nav a:hover{
     color:#39a7ff;
 }
 
 .hero{
     text-align:center;
-    padding:60px 20px;
+    padding:65px 20px;
+    background:radial-gradient(circle at top,#124477,#07111f 65%);
 }
 
-.hero h2{
-    font-size:42px;
-    margin-bottom:10px;
+.hero h1{
+    font-size:45px;
+    margin:0 0 10px;
 }
 
-.hero span{
+.hero h1 span{
     color:#39a7ff;
 }
 
@@ -50,51 +78,64 @@ header h1{
 }
 
 .container{
-    max-width:1000px;
+    max-width:950px;
     margin:auto;
-    padding:20px;
+    padding:40px 20px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
-}
-
-.card{
+.topic{
     background:#0c1b2d;
     border:1px solid #24415f;
-    border-radius:15px;
-    padding:25px;
+    border-radius:16px;
+    padding:28px;
+    margin-bottom:25px;
 }
 
-.card h3{
+.topic h2{
     color:#4db2ff;
+    margin-top:0;
 }
 
-.card p{
-    color:#bdcad7;
+.topic h3{
+    color:#82caff;
+    margin-top:22px;
+}
+
+.topic p,
+.topic li{
+    color:#c1cedb;
+}
+
+.topic ul,
+.topic ol{
+    padding-left:25px;
+}
+
+.highlight{
+    background:#07111f;
+    border-left:4px solid #1688ff;
+    padding:15px;
+    margin-top:15px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
+    padding:11px 23px;
     background:#1688ff;
     color:white;
     text-decoration:none;
     border-radius:25px;
+    font-weight:bold;
 }
 
-.back{
-    text-align:center;
-    margin:40px 0;
+.btn:hover{
+    background:#39a7ff;
 }
 
 footer{
-    text-align:center;
-    padding:25px;
     background:#030912;
+    text-align:center;
+    padding:30px 20px;
     color:#8192a6;
 }
 
@@ -102,210 +143,391 @@ footer strong{
     color:#39a7ff;
 }
 
-</style>
+@media(max-width:650px){
 
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:0 6px;
+        font-size:13px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .topic{
+        padding:21px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-<h1>PS CSE HUB</h1>
+<div class="nav">
+
+<div class="logo">
+PS <span>CSE HUB</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cse-notes.html">CSE Notes</a>
+</nav>
+
+</div>
 
 </header>
 
 
 <section class="hero">
 
-<h2>CSE <span>Notes</span></h2>
+<h1>
+Computer <span>Fundamentals</span>
+</h1>
 
 <p>
-Computer Science & Engineering study material
+Complete beginner-friendly notes for CSE students.
 </p>
 
 </section>
 
 
-<div class="container">
-
-<div class="cards">
+<main class="container">
 
 
-<div class="card">
+<div class="topic">
 
-<h3>💻 Computer Fundamentals</h3>
+<h2>1. What is a Computer?</h2>
 
 <p>
-Computer basics, CPU, memory, hardware,
-software and input-output devices.
+A computer is an electronic device that accepts data as
+input, processes the data according to instructions,
+stores information and produces useful output.
 </p>
 
-<a href="#computer" class="btn">
-Read Notes
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>🧑‍💻 Programming</h3>
-
-<p>
-Programming basics, variables, data types,
-operators, conditions and loops.
-</p>
-
-<a href="#programming" class="btn">
-Read Notes
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>🔢 Engineering Mathematics</h3>
-
-<p>
-Matrices, determinants, differentiation,
-integration and important mathematics topics.
-</p>
-
-<a href="#maths" class="btn">
-Read Notes
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>⚡ Digital Electronics</h3>
-
-<p>
-Number systems, binary numbers, logic gates
-and Boolean algebra.
-</p>
-
-<a href="#digital" class="btn">
-Read Notes
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>🌱 Environment & Sustainability</h3>
-
-<p>
-Environment, pollution, natural resources
-and sustainable development.
-</p>
-
-<a href="#environment" class="btn">
-Read Notes
-</a>
-
-</div>
-
-
-</div>
-
-
-<div id="computer" class="card" style="margin-top:30px;">
-
-<h3>💻 Computer Fundamentals</h3>
-
-<p>
-A computer is an electronic device that accepts
-data, processes it and produces useful information.
-</p>
-
-<p>
-<strong>CPU:</strong> Central Processing Unit.
-It processes instructions and controls computer operations.
-</p>
-
-</div>
-
-
-<div id="programming" class="card" style="margin-top:30px;">
-
-<h3>🧑‍💻 Programming Fundamentals</h3>
-
-<p>
-Programming means writing instructions for a computer
-to perform a particular task.
-</p>
-
-<p>
-Important concepts include variables, data types,
-operators, conditions, loops and functions.
-</p>
-
-</div>
-
-
-<div id="maths" class="card" style="margin-top:30px;">
-
-<h3>🔢 Engineering Mathematics</h3>
-
-<p>
-Important topics include matrices, determinants,
-differentiation, integration and differential equations.
-</p>
-
-</div>
-
-
-<div id="digital" class="card" style="margin-top:30px;">
-
-<h3>⚡ Digital Electronics</h3>
-
-<p>
-Important topics include number systems, binary numbers,
-logic gates and Boolean algebra.
-</p>
-
-</div>
-
-
-<div id="environment" class="card" style="margin-top:30px;">
-
-<h3>🌱 Environment & Sustainability</h3>
-
-<p>
-Important topics include ecosystem, pollution,
-natural resources, climate change and sustainability.
-</p>
-
-</div>
-
-
-<div class="back">
-
-<a href="index.html" class="btn">
-← Back to PS CSE HUB
-</a>
-
+<div class="highlight">
+<b>Simple definition:</b> A computer takes Input → Processes it → Gives Output.
 </div>
 
 </div>
 
 
-<footer>
+<div class="topic">
+
+<h2>2. Characteristics of a Computer</h2>
+
+<ul>
+<li><b>Speed:</b> A computer can perform millions of operations very quickly.</li>
+
+<li><b>Accuracy:</b> It can produce highly accurate results when the instructions and data are correct.</li>
+
+<li><b>Storage:</b> Computers can store large amounts of information.</li>
+
+<li><b>Diligence:</b> A computer does not become tired while performing repetitive tasks.</li>
+
+<li><b>Automation:</b> Once programmed, many tasks can be performed automatically.</li>
+
+<li><b>Versatility:</b> Computers can perform many different types of tasks.</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>3. Types of Computers</h2>
+
+<h3>Supercomputer</h3>
 
 <p>
-© 2026 <strong>PS CSE HUB</strong>
+Supercomputers are extremely powerful computers used for
+complex calculations, scientific research and simulations.
 </p>
+
+<h3>Mainframe Computer</h3>
 
 <p>
-Created by PS • Learn • Code • Build 🚀
+Mainframe computers are designed to handle large amounts
+of data and many users simultaneously.
 </p>
 
-</footer>
+<h3>Personal Computer</h3>
 
-</body>
-    </html>
+<p>
+Personal computers include desktops and laptops commonly
+used by individuals.
+</p>
+
+<h3>Embedded Computer</h3>
+
+<p>
+Embedded computers are built into devices such as cars,
+washing machines, cameras and other electronic systems.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h2>4. Hardware and Software</h2>
+
+<h3>Hardware</h3>
+
+<p>
+Hardware refers to the physical components of a computer
+that we can see and touch.
+</p>
+
+<ul>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Monitor</li>
+<li>CPU</li>
+<li>RAM</li>
+<li>Hard Disk / SSD</li>
+</ul>
+
+<h3>Software</h3>
+
+<p>
+Software is a collection of programs and instructions that
+tell the computer what to do.
+</p>
+
+<ul>
+<li>Operating Systems</li>
+<li>Web Browsers</li>
+<li>Text Editors</li>
+<li>Media Players</li>
+<li>Programming Software</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>5. CPU</h2>
+
+<p>
+CPU stands for <b>Central Processing Unit</b>. It is one of
+the most important components of a computer and performs
+processing and control operations.
+</p>
+
+<h3>Main Parts of CPU</h3>
+
+<ul>
+
+<li>
+<b>ALU:</b> Arithmetic Logic Unit performs arithmetic
+and logical operations.
+</li>
+
+<li>
+<b>CU:</b> Control Unit controls and coordinates
+computer operations.
+</li>
+
+<li>
+<b>Registers:</b> Very fast small storage locations
+inside the processor.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>6. Computer Memory</h2>
+
+<h3>Primary Memory</h3>
+
+<p>
+Primary memory is directly accessible by the CPU.
+Examples include RAM and ROM.
+</p>
+
+<h3>RAM</h3>
+
+<p>
+RAM stands for Random Access Memory. It temporarily stores
+data and instructions being used by the computer.
+</p>
+
+<h3>ROM</h3>
+
+<p>
+ROM stands for Read Only Memory. It stores information
+that generally remains available even when power is removed.
+</p>
+
+<h3>Secondary Storage</h3>
+
+<p>
+Secondary storage is used for long-term storage of data.
+Examples include HDD, SSD, memory cards and pen drives.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h2>7. Input Devices</h2>
+
+<p>
+Input devices are used to enter data and instructions
+into a computer.
+</p>
+
+<ul>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Scanner</li>
+<li>Microphone</li>
+<li>Webcam</li>
+<li>Touchscreen</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>8. Output Devices</h2>
+
+<p>
+Output devices present processed information to the user.
+</p>
+
+<ul>
+<li>Monitor</li>
+<li>Printer</li>
+<li>Speaker</li>
+<li>Projector</li>
+<li>Headphones</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>9. Operating System</h2>
+
+<p>
+An Operating System, or OS, is system software that manages
+computer hardware and provides services for applications.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+<li>macOS</li>
+<li>Android</li>
+<li>iOS</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>10. Number System Basics</h2>
+
+<p>
+Number systems are methods of representing numbers.
+Computers commonly use the binary number system.
+</p>
+
+<ul>
+<li><b>Binary:</b> Base 2 — digits 0 and 1</li>
+<li><b>Decimal:</b> Base 10 — digits 0 to 9</li>
+<li><b>Octal:</b> Base 8 — digits 0 to 7</li>
+<li><b>Hexadecimal:</b> Base 16 — digits 0 to 9 and A to F</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>11. Generations of Computers</h2>
+
+<ol>
+
+<li>
+<b>First Generation:</b> Vacuum tubes
+</li>
+
+<li>
+<b>Second Generation:</b> Transistors
+</li>
+
+<li>
+<b>Third Generation:</b> Integrated Circuits
+</li>
+
+<li>
+<b>Fourth Generation:</b> Microprocessors
+</li>
+
+<li>
+<b>Fifth Generation:</b> Advanced computing technologies including AI-oriented systems
+</li>
+
+</ol>
+
+</div>
+
+
+<div class="topic">
+
+<h2>12. Important Exam Questions</h2>
+
+<ol>
+
+<li>What is a computer?</li>
+
+<li>Explain the characteristics of a computer.</li>
+
+<li>What is CPU? Explain its components.</li>
+
+<li>Differentiate between hardware and software.</li>
+
+<li>What is RAM and ROM?</li>
+
+<li>Explain primary and secondary memory.</li>
+
+<li>What is an operating system?</li>
+
+<li>Explain different types of computers.</li>
+
+<li>What are input and output devices?</li>
+
+<li>Explain binary, decimal, octal and hexadecimal number systems.</li>
+
+</ol>
+
+</div>
+
+
+<div style="text-align:center;margin:40px 0;">
+
+<a href="cse-notes.html" class="btn">
+← Back to CSE Notes
+    </a>
