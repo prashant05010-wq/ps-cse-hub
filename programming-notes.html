@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Programming Notes | PS CSE HUB</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#07111f;
+    color:white;
+    line-height:1.7;
+}
+
+header{
+    background:#050d18;
+    padding:18px 20px;
+    border-bottom:1px solid #24415f;
+}
+
+.nav{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#39a7ff;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.nav a{
+    color:#d5e4f2;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:radial-gradient(circle at top,#124477,#07111f 65%);
+}
+
+.hero h1{
+    font-size:45px;
+    margin:0 0 10px;
+}
+
+.hero h1 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    color:#b8c9da;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.topic{
+    background:#0c1b2d;
+    border:1px solid #24415f;
+    border-radius:16px;
+    padding:27px;
+    margin-bottom:25px;
+}
+
+.topic h2{
+    color:#4db2ff;
+}
+
+.topic h3{
+    color:#82caff;
+    margin-top:20px;
+}
+
+.topic p,
+.topic li{
+    color:#c3cfdb;
+}
+
+.topic ul,
+.topic ol{
+    padding-left:25px;
+}
+
+.code{
+    background:#020811;
+    border:1px solid #203c59;
+    border-radius:10px;
+    padding:18px;
+    overflow-x:auto;
+    color:#d8e8f5;
+    font-family:monospace;
+    white-space:pre-wrap;
+}
+
+.question{
+    background:#07111f;
+    border-left:4px solid #1688ff;
+    padding:15px;
+    margin-top:15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:11px 23px;
+    background:#1688ff;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
+
+.back{
+    text-align:center;
+    margin:40px 0;
+}
+
+footer{
+    background:#030912;
+    text-align:center;
+    padding:30px;
+    color:#8192a6;
+}
+
+footer strong{
+    color:#39a7ff;
+}
+
+@media(max-width:600px){
+
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .topic{
+        padding:21px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+PS <span>CSE HUB</span>
+</div>
+
+<a href="cse-notes.html">← CSE Notes</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+Programming <span>Notes</span>
+</h1>
+
+<p>
+Programming fundamentals explained in simple language.
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="topic">
+
+<h2>1. What is Programming?</h2>
+
+<p>
+Programming is the process of writing instructions that
+tell a computer how to perform a particular task.
+</p>
+
+<div class="question">
+<strong>Simple idea:</strong>
+Program = Instructions given to a computer.
+</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>2. Algorithm</h2>
+
+<p>
+An algorithm is a step-by-step procedure used to solve
+a particular problem.
+</p>
+
+<h3>Example: Add Two Numbers</h3>
+
+<ol>
+<li>Start</li>
+<li>Take two numbers</li>
+<li>Add the numbers</li>
+<li>Display the result</li>
+<li>Stop</li>
+</ol>
+
+</div>
+
+
+<div class="topic">
+
+<h2>3. Flowchart</h2>
+
+<p>
+A flowchart is a graphical representation of an algorithm.
+It uses different symbols to represent different operations.
+</p>
+
+<ul>
+<li>Oval → Start / Stop</li>
+<li>Parallelogram → Input / Output</li>
+<li>Rectangle → Process</li>
+<li>Diamond → Decision</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>4. Variables</h2>
+
+<p>
+A variable is a named memory location used to store data
+that can change during program execution.
+</p>
+
+<h3>Example in C</h3>
+
+<div class="code">int age = 18;
+float marks = 75.5;
+char grade = 'A';</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>5. Data Types</h2>
+
+<p>
+Data types specify the type of data that a variable can store.
+</p>
+
+<ul>
+<li><strong>int</strong> → Integer numbers</li>
+<li><strong>float</strong> → Decimal numbers</li>
+<li><strong>double</strong> → Larger decimal values</li>
+<li><strong>char</strong> → Single character</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>6. Operators</h2>
+
+<h3>Arithmetic Operators</h3>
+
+<ul>
+<li>+</li>
+<li>-</li>
+<li>*</li>
+<li>/</li>
+<li>%</li>
+</ul>
+
+<h3>Relational Operators</h3>
+
+<ul>
+<li>==</li>
+<li>!=</li>
+<li>&gt;</li>
+<li>&lt;</li>
+<li>&gt;=</li>
+<li>&lt;=</li>
+</ul>
+
+<h3>Logical Operators</h3>
+
+<ul>
+<li>&amp;&amp;</li>
+<li>||</li>
+<li>!</li>
+</ul>
+
+</div>
+
+
+<div class="topic">
+
+<h2>7. If-Else</h2>
+
+<p>
+The if-else statement is used to make decisions in a program.
+</p>
+
+<div class="code">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int age;
+
+    printf("Enter age: ");
+    scanf("%d", &amp;age);
+
+    if(age &gt;= 18)
+    {
+        printf("Adult");
+    }
+    else
+    {
+        printf("Minor");
+    }
+
+    return 0;
+}</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>8. Switch Statement</h2>
+
+<p>
+The switch statement is useful when one value needs to be
+compared with multiple possible cases.
+</p>
+
+<div class="code">switch(choice)
+{
+    case 1:
+        printf("One");
+        break;
+
+    case 2:
+        printf("Two");
+        break;
+
+    default:
+        printf("Invalid choice");
+}</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>9. Loops</h2>
+
+<p>
+Loops are used to execute a block of code repeatedly.
+</p>
+
+<h3>Types of Loops</h3>
+
+<ul>
+<li>for loop</li>
+<li>while loop</li>
+<li>do-while loop</li>
+</ul>
+
+<h3>Example: for Loop</h3>
+
+<div class="code">for(int i = 1; i &lt;= 5; i++)
+{
+    printf("%d\n", i);
+}</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>10. Functions</h2>
+
+<p>
+A function is a block of code designed to perform a
+specific task. Functions help make programs organized
+and reusable.
+</p>
+
+<div class="code">int add(int a, int b)
+{
+    return a + b;
+}</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>11. Arrays</h2>
+
+<p>
+An array is a collection of elements of the same data type
+stored under one name.
+</p>
+
+<div class="code">int marks[5] = {70, 75, 80, 85, 90};</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>12. Strings</h2>
+
+<p>
+A string is a sequence of characters. In C, strings are
+stored using character arrays.
+</p>
+
+<div class="code">char name[] = "Prashant";</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>13. Pointers</h2>
+
+<p>
+A pointer is a variable that stores the memory address
+of another variable.
+</p>
+
+<div class="code">int x = 10;
+int *p = &amp;x;</div>
+
+</div>
+
+
+<div class="topic">
+
+<h2>14. Practice Questions</h2>
+
+<ol>
+<li>Write a program to add two numbers.</li>
+<li>Write a program to check even or odd.</li>
+<li>Find the largest of three numbers.</li>
+<li>Print the multiplication table of a number.</li>
+<li>Find the factorial of a number.</li>
+<li>Check whether a number is prime.</li>
+<li>Reverse a number.</li>
+<li>Check whether a number is palindrome.</li>
+<li>Print Fibonacci series.</li>
+<li>Calculate grade according to marks.</li>
+</ol>
+
+</div>
+
+
+<div class="back">
+
+<a href="cse-notes.html" class="btn">
+← Back to CSE Notes
+</a>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>© 2026 <strong>PS CSE HUB</strong></p>
+
+<p>Created by PS • Learn • Code • Build 🚀</p>
+
+</footer>
+
+</body>
+  </html>
