@@ -7,186 +7,151 @@
 <title>CSE Notes | PS CSE HUB</title>
 
 <style>
-
-*{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+*{box-sizing:border-box;scroll-behavior:smooth}
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#07111f;
-    color:white;
-    line-height:1.6;
+margin:0;
+font-family:Arial,sans-serif;
+background:#07111f;
+color:white;
+line-height:1.6;
 }
 
 header{
-    background:#050d18;
-    border-bottom:1px solid #24415f;
-    padding:18px 20px;
+background:#050d18;
+padding:18px 20px;
+border-bottom:1px solid #24415f;
 }
 
 .nav{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    color:#39a7ff;
-    font-size:23px;
-    font-weight:bold;
+color:#39a7ff;
+font-size:23px;
+font-weight:bold;
 }
 
-.logo span{
-    color:white;
-}
+.logo span{color:white}
 
 .nav a{
-    color:#d5e4f2;
-    text-decoration:none;
-    margin-left:18px;
-}
-
-.nav a:hover{
-    color:#39a7ff;
+color:#d5e4f2;
+text-decoration:none;
+margin-left:18px;
 }
 
 .hero{
-    text-align:center;
-    padding:65px 20px;
-    background:radial-gradient(circle at top,#124477,#07111f 65%);
+text-align:center;
+padding:65px 20px;
+background:radial-gradient(circle at top,#124477,#07111f 65%);
 }
 
 .hero h1{
-    font-size:48px;
-    margin:0 0 10px;
+font-size:48px;
+margin:0 0 10px;
 }
 
-.hero h1 span{
-    color:#39a7ff;
-}
+.hero h1 span{color:#39a7ff}
 
-.hero p{
-    color:#b8c9da;
-    font-size:17px;
-}
+.hero p{color:#b8c9da}
 
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:55px 20px;
+max-width:1100px;
+margin:auto;
+padding:55px 20px;
 }
 
 .title{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
-.title h2{
-    font-size:35px;
-}
+.title h2{font-size:35px}
 
-.title p{
-    color:#93a7ba;
-}
+.title p{color:#93a7ba}
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
 }
 
 .card{
-    background:#0c1b2d;
-    border:1px solid #24415f;
-    border-radius:18px;
-    padding:28px;
-    transition:.3s;
+background:#0c1b2d;
+border:1px solid #24415f;
+border-radius:18px;
+padding:28px;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#1688ff;
+transform:translateY(-5px);
+border-color:#1688ff;
 }
 
 .icon{
-    font-size:40px;
-    margin-bottom:12px;
+font-size:40px;
+margin-bottom:12px;
 }
 
-.card h3{
-    color:#4db2ff;
-}
+.card h3{color:#4db2ff}
 
-.card p{
-    color:#bdcad7;
-}
+.card p{color:#bdcad7}
 
 .btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:11px 22px;
-    background:#1688ff;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-    font-weight:bold;
+display:inline-block;
+margin-top:15px;
+padding:11px 22px;
+background:#1688ff;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
 }
 
-.btn:hover{
-    background:#39a7ff;
-}
+.btn:hover{background:#39a7ff}
 
 .info{
-    margin-top:45px;
-    padding:28px;
-    background:#0a1727;
-    border:1px solid #24415f;
-    border-radius:18px;
+margin-top:45px;
+padding:28px;
+background:#0a1727;
+border:1px solid #24415f;
+border-radius:18px;
 }
 
-.info h2{
-    color:#4db2ff;
-}
+.info h2{color:#4db2ff}
 
-.info p,
-.info li{
-    color:#bdcad7;
-}
+.info p,.info li{color:#bdcad7}
 
 footer{
-    background:#030912;
-    text-align:center;
-    padding:30px 20px;
-    color:#8192a6;
+background:#030912;
+text-align:center;
+padding:30px 20px;
+color:#8192a6;
 }
 
-footer strong{
-    color:#39a7ff;
-}
+footer strong{color:#39a7ff}
 
 @media(max-width:650px){
 
-    .nav{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .nav a{
-        margin:0 7px;
-        font-size:13px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
+.nav{
+flex-direction:column;
+gap:10px;
 }
 
+.nav a{
+margin:0 7px;
+font-size:13px;
+}
+
+.hero h1{font-size:38px}
+
+}
 </style>
 </head>
 
@@ -212,9 +177,7 @@ PS <span>CSE HUB</span>
 
 <section class="hero">
 
-<h1>
-CSE <span>Notes</span>
-</h1>
+<h1>CSE <span>Notes</span></h1>
 
 <p>
 Study material and notes for Computer Science & Engineering students.
@@ -225,22 +188,17 @@ Study material and notes for Computer Science & Engineering students.
 
 <main class="container">
 
-
 <div class="title">
 
 <h2>📚 CSE Subjects</h2>
 
-<p>
-Choose a subject and start learning.
-</p>
+<p>Choose a subject and start learning.</p>
 
 </div>
 
 
 <div class="cards">
 
-
-<!-- COMPUTER FUNDAMENTALS -->
 
 <div class="card">
 
@@ -260,8 +218,6 @@ View Notes →
 </div>
 
 
-<!-- PROGRAMMING -->
-
 <div class="card">
 
 <div class="icon">🧑‍💻</div>
@@ -269,18 +225,16 @@ View Notes →
 <h3>Programming</h3>
 
 <p>
-Learn programming concepts, variables, data types,
-operators, conditions, loops and functions.
+Learn programming concepts, algorithms, variables,
+data types, operators, conditions, loops and functions.
 </p>
 
-<a href="#" class="btn">
-Coming Soon →
+<a href="programming-notes.html" class="btn">
+View Notes →
 </a>
 
 </div>
 
-
-<!-- MATHEMATICS -->
 
 <div class="card">
 
@@ -289,8 +243,8 @@ Coming Soon →
 <h3>Engineering Mathematics</h3>
 
 <p>
-Important mathematics topics for engineering students
-including matrices, calculus and differential equations.
+Matrices, calculus, differential equations and
+other important engineering mathematics topics.
 </p>
 
 <a href="#" class="btn">
@@ -300,8 +254,6 @@ Coming Soon →
 </div>
 
 
-<!-- DIGITAL ELECTRONICS -->
-
 <div class="card">
 
 <div class="icon">⚡</div>
@@ -309,7 +261,7 @@ Coming Soon →
 <h3>Digital Electronics</h3>
 
 <p>
-Learn number systems, logic gates, Boolean algebra
+Number systems, logic gates, Boolean algebra
 and digital circuits.
 </p>
 
@@ -320,8 +272,6 @@ Coming Soon →
 </div>
 
 
-<!-- ENVIRONMENT -->
-
 <div class="card">
 
 <div class="icon">🌱</div>
@@ -329,7 +279,7 @@ Coming Soon →
 <h3>Environment & Sustainability</h3>
 
 <p>
-Learn about environment, pollution, resources,
+Environment, pollution, natural resources,
 climate change and sustainability.
 </p>
 
@@ -348,9 +298,8 @@ Coming Soon →
 <h2>🎯 PS CSE HUB</h2>
 
 <p>
-This section will provide simple and useful study material
-for CSE students. More subjects, chapters, notes and
-practice questions will be added regularly.
+More subjects, chapters, notes and practice questions
+will be added regularly.
 </p>
 
 <ul>
@@ -364,7 +313,7 @@ practice questions will be added regularly.
 </div>
 
 
-<div style="text-align:center;margin-top:45px;">
+<div style="text-align:center;margin-top:45px">
 
 <a href="index.html" class="btn">
 ← Back to PS CSE HUB
@@ -372,19 +321,14 @@ practice questions will be added regularly.
 
 </div>
 
-
 </main>
 
 
 <footer>
 
-<p>
-© 2026 <strong>PS CSE HUB</strong>
-</p>
+<p>© 2026 <strong>PS CSE HUB</strong></p>
 
-<p>
-Created by PS • Learn • Code • Build 🚀
-</p>
+<p>Created by PS • Learn • Code • Build 🚀</p>
 
 </footer>
 
