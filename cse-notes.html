@@ -6,181 +6,95 @@
 
 <title>CSE Notes | PS CSE HUB</title>
 
-<meta name="description" content="CSE Notes for Computer Science and Engineering students - PS CSE HUB.">
-
 <style>
+
 *{
-    margin:0;
-    padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
-    scroll-behavior:smooth;
 }
 
 body{
+    margin:0;
+    font-family:Arial,sans-serif;
     background:#07111f;
     color:white;
-    line-height:1.7;
 }
 
 header{
     background:#050d18;
-    border-bottom:1px solid #193451;
-    position:sticky;
-    top:0;
-    z-index:10;
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid #24415f;
 }
 
-.nav{
-    max-width:1100px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    color:#39a7ff;
-    font-size:23px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:white;
-}
-
-.nav a{
-    color:#d5e4f2;
-    text-decoration:none;
-    margin-left:18px;
-    font-size:14px;
-}
-
-.nav a:hover{
+header h1{
+    margin:0;
     color:#39a7ff;
 }
 
 .hero{
     text-align:center;
-    padding:70px 20px;
-    background:radial-gradient(circle at top,#124477,#07111f 65%);
+    padding:60px 20px;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
+.hero h2{
+    font-size:42px;
+    margin-bottom:10px;
 }
 
-.hero h1 span{
+.hero span{
     color:#39a7ff;
 }
 
 .hero p{
-    max-width:650px;
-    margin:auto;
     color:#b8c9da;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
-    padding:55px 20px;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.title h2{
-    font-size:35px;
-}
-
-.title p{
-    color:#93a7ba;
-    margin-top:8px;
+    padding:20px;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
+    gap:20px;
 }
 
 .card{
     background:#0c1b2d;
-    border:1px solid #1c3855;
-    border-radius:18px;
-    padding:28px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#1688ff;
-}
-
-.icon{
-    font-size:38px;
-    margin-bottom:12px;
+    border:1px solid #24415f;
+    border-radius:15px;
+    padding:25px;
 }
 
 .card h3{
     color:#4db2ff;
-    margin-bottom:10px;
 }
 
 .card p{
-    color:#b5c5d5;
-}
-
-.topic{
-    margin-top:45px;
-    background:#091827;
-    border:1px solid #1c3855;
-    border-radius:18px;
-    padding:30px;
-}
-
-.topic h2{
-    color:#4db2ff;
-    margin-bottom:15px;
-}
-
-.topic h3{
-    color:#82caff;
-    margin-top:20px;
-}
-
-.topic p,
-.topic li{
-    color:#b9c8d7;
-}
-
-.topic ul{
-    padding-left:22px;
+    color:#bdcad7;
 }
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:11px 23px;
-    border-radius:25px;
+    margin-top:15px;
+    padding:10px 20px;
     background:#1688ff;
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    border-radius:25px;
 }
 
-.btn:hover{
-    background:#39a7ff;
+.back{
+    text-align:center;
+    margin:40px 0;
 }
 
 footer{
-    background:#030912;
     text-align:center;
-    padding:30px 20px;
+    padding:25px;
+    background:#030912;
     color:#8192a6;
 }
 
@@ -188,8 +102,210 @@ footer strong{
     color:#39a7ff;
 }
 
-@media(max-width:650px){
+</style>
 
-    .nav{
-        flex-direction:column;
-       
+</head>
+
+<body>
+
+<header>
+
+<h1>PS CSE HUB</h1>
+
+</header>
+
+
+<section class="hero">
+
+<h2>CSE <span>Notes</span></h2>
+
+<p>
+Computer Science & Engineering study material
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>💻 Computer Fundamentals</h3>
+
+<p>
+Computer basics, CPU, memory, hardware,
+software and input-output devices.
+</p>
+
+<a href="#computer" class="btn">
+Read Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧑‍💻 Programming</h3>
+
+<p>
+Programming basics, variables, data types,
+operators, conditions and loops.
+</p>
+
+<a href="#programming" class="btn">
+Read Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>🔢 Engineering Mathematics</h3>
+
+<p>
+Matrices, determinants, differentiation,
+integration and important mathematics topics.
+</p>
+
+<a href="#maths" class="btn">
+Read Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>⚡ Digital Electronics</h3>
+
+<p>
+Number systems, binary numbers, logic gates
+and Boolean algebra.
+</p>
+
+<a href="#digital" class="btn">
+Read Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌱 Environment & Sustainability</h3>
+
+<p>
+Environment, pollution, natural resources
+and sustainable development.
+</p>
+
+<a href="#environment" class="btn">
+Read Notes
+</a>
+
+</div>
+
+
+</div>
+
+
+<div id="computer" class="card" style="margin-top:30px;">
+
+<h3>💻 Computer Fundamentals</h3>
+
+<p>
+A computer is an electronic device that accepts
+data, processes it and produces useful information.
+</p>
+
+<p>
+<strong>CPU:</strong> Central Processing Unit.
+It processes instructions and controls computer operations.
+</p>
+
+</div>
+
+
+<div id="programming" class="card" style="margin-top:30px;">
+
+<h3>🧑‍💻 Programming Fundamentals</h3>
+
+<p>
+Programming means writing instructions for a computer
+to perform a particular task.
+</p>
+
+<p>
+Important concepts include variables, data types,
+operators, conditions, loops and functions.
+</p>
+
+</div>
+
+
+<div id="maths" class="card" style="margin-top:30px;">
+
+<h3>🔢 Engineering Mathematics</h3>
+
+<p>
+Important topics include matrices, determinants,
+differentiation, integration and differential equations.
+</p>
+
+</div>
+
+
+<div id="digital" class="card" style="margin-top:30px;">
+
+<h3>⚡ Digital Electronics</h3>
+
+<p>
+Important topics include number systems, binary numbers,
+logic gates and Boolean algebra.
+</p>
+
+</div>
+
+
+<div id="environment" class="card" style="margin-top:30px;">
+
+<h3>🌱 Environment & Sustainability</h3>
+
+<p>
+Important topics include ecosystem, pollution,
+natural resources, climate change and sustainability.
+</p>
+
+</div>
+
+
+<div class="back">
+
+<a href="index.html" class="btn">
+← Back to PS CSE HUB
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 <strong>PS CSE HUB</strong>
+</p>
+
+<p>
+Created by PS • Learn • Code • Build 🚀
+</p>
+
+</footer>
+
+</body>
+    </html>
