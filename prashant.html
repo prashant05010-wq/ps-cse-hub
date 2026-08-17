@@ -1,286 +1,552 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PS CSE HUB</title>
+
+<title>PS CSE HUB | CSE Notes & Programming</title>
+
+<meta name="description"
+content="PS CSE HUB - CSE notes, programming, computer fundamentals, mathematics, digital electronics and environment sustainability notes.">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#07111f;
-    color:white;
+margin:0;
+font-family:Arial,sans-serif;
+background:#07111f;
+color:white;
+line-height:1.6;
 }
 
-header{
-    background:linear-gradient(135deg,#0b1f3a,#0066ff);
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:10;
+/* NAVBAR */
+
+nav{
+background:#050d18;
+padding:18px 20px;
+border-bottom:1px solid #24415f;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
+font-size:23px;
+font-weight:bold;
+color:#39a7ff;
+}
+
+.logo span{
+color:white;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:15px;
+color:#d5e4f2;
+text-decoration:none;
+margin-left:20px;
 }
 
+nav a:hover{
+color:#39a7ff;
+}
+
+/* HERO */
+
 .hero{
-    min-height:85vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 20px;
-    background:
-    radial-gradient(circle at top,#123d72,#07111f 60%);
+text-align:center;
+padding:90px 20px;
+background:radial-gradient(circle at top,#124477,#07111f 65%);
 }
 
 .hero h1{
-    font-size:55px;
-    margin-bottom:15px;
+font-size:52px;
+margin:0;
 }
 
 .hero h1 span{
-    color:#36a3ff;
+color:#39a7ff;
 }
 
 .hero p{
-    color:#c8d5e5;
-    font-size:19px;
-    max-width:650px;
-    margin:auto;
-    line-height:1.6;
+font-size:19px;
+color:#b8c9da;
+max-width:700px;
+margin:20px auto;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:13px 28px;
-    background:#1683ff;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+display:inline-block;
+padding:13px 25px;
+background:#1688ff;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+margin:8px;
 }
 
-section{
-    padding:70px 7%;
+.btn:hover{
+background:#39a7ff;
 }
 
-.title{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:40px;
+/* ABOUT */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
 }
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-title h2{
+font-size:35px;
+color:#4db2ff;
+}
+
+.section-title p{
+color:#93a7ba;
+}
+
+/* CARDS */
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
 }
 
 .card{
-    background:#0d1b2d;
-    border:1px solid #1d3654;
-    padding:28px;
-    border-radius:18px;
-    transition:.3s;
+background:#0c1b2d;
+border:1px solid #24415f;
+border-radius:18px;
+padding:27px;
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-7px);
-    border-color:#1683ff;
+transform:translateY(-5px);
+border-color:#1688ff;
+}
+
+.icon{
+font-size:42px;
 }
 
 .card h3{
-    color:#36a3ff;
-    margin-bottom:12px;
+color:#4db2ff;
 }
 
 .card p{
-    color:#b8c5d4;
-    line-height:1.5;
+color:#bdcad7;
 }
 
-.card a{
-    display:inline-block;
-    margin-top:18px;
-    color:#36a3ff;
-    text-decoration:none;
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-.about{
-    background:#091625;
-    text-align:center;
+.feature{
+background:#0a1727;
+border:1px solid #203c59;
+border-radius:15px;
+padding:22px;
+text-align:center;
 }
 
-.about p{
-    max-width:750px;
-    margin:auto;
-    color:#bdcad8;
-    line-height:1.8;
-    font-size:17px;
+.feature h3{
+color:#82caff;
 }
 
-.contact{
-    text-align:center;
-}
+/* FOOTER */
 
 footer{
-    background:#040a12;
-    text-align:center;
-    padding:25px;
-    color:#8494a8;
+background:#030912;
+padding:40px 20px;
+text-align:center;
+color:#8192a6;
 }
 
 footer strong{
-    color:#36a3ff;
+color:#39a7ff;
 }
 
-@media(max-width:600px){
-    header{
-        padding:15px 5%;
-    }
+/* MOBILE */
 
-    nav a{
-        margin-left:8px;
-        font-size:12px;
-    }
+@media(max-width:650px){
 
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    section{
-        padding:55px 5%;
-    }
-
-    .title{
-        font-size:28px;
-    }
+.hero h1{
+font-size:39px;
 }
+
+nav a{
+margin-left:8px;
+font-size:14px;
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <div class="logo">PS CSE HUB</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#resources">Resources</a>
-        <a href="#about">About</a>
-    </nav>
-</header>
+<!-- NAVIGATION -->
 
-<section class="hero" id="home">
-    <div>
-        <h1>Welcome to <span>PS CSE HUB</span></h1>
+<nav>
 
-        <p>
-            Your simple hub for Computer Science & Engineering notes,
-            coding resources, projects and useful learning materials.
-        </p>
+<div class="nav">
 
-        <a href="#resources" class="btn">Explore Resources</a>
-    </div>
-</section>
+<div class="logo">
+PS <span>CSE HUB</span>
+</div>
 
-<section id="resources">
+<div>
 
-    <h2 class="title">CSE Resources</h2>
+<a href="prashant.html">Home</a>
 
-    <div class="cards">
+<a href="cse-notes.html">CSE Notes</a>
 
-        <div class="card">
-            <h3>💻 C Programming</h3>
-            <p>
-                Learn C programming from basic concepts to important
-                programs and practice questions.
-            </p>
-            <a href="#">Explore →</a>
-        </div>
+</div>
 
-        <div class="card">
-            <h3>📚 CSE Notes</h3>
-            <p>
-                Useful notes and study material for Computer Science
-                & Engineering students.
-            </p>
-            <a href="#">View Notes →</a>
-        </div>
+</div>
 
-        <div class="card">
-            <h3>🚀 Projects</h3>
-            <p>
-                Find project ideas and practical concepts to improve
-                your programming and development skills.
-            </p>
-            <a href="#">View Projects →</a>
-        </div>
+</nav>
 
-        <div class="card">
-            <h3>🧠 Programming</h3>
-            <p>
-                Improve your coding skills with programming concepts,
-                examples and practice problems.
-            </p>
-            <a href="#">Start Learning →</a>
-        </div>
 
-    </div>
-</section>
+<!-- HERO -->
 
-<section class="about" id="about">
+<section class="hero">
 
-    <h2 class="title">About PS CSE HUB</h2>
+<h1>
+Welcome to <span>PS CSE HUB</span>
+</h1>
 
-    <p>
-        PS CSE HUB is created for students who want to learn coding,
-        Computer Science and technology in a simple way.
-        Our goal is to make useful learning resources easily accessible
-        to CSE students.
-    </p>
+<p>
+Your student-friendly place for CSE notes,
+programming practice, important questions and
+easy explanations.
+</p>
+
+<a href="cse-notes.html" class="btn">
+📚 Explore CSE Notes
+</a>
+
+<a href="#about" class="btn">
+Learn More ↓
+</a>
 
 </section>
 
-<section class="contact">
 
-    <h2 class="title">Keep Learning 🚀</h2>
+<!-- ABOUT -->
 
-    <p style="color:#b8c5d4;">
-        Learn • Code • Build • Grow
-    </p>
+<section id="about">
 
-    <a href="#home" class="btn">Back to Home</a>
+<div class="container">
+
+<div class="section-title">
+
+<h2>🎓 About PS CSE HUB</h2>
+
+<p>
+Learn • Practice • Build
+</p>
+
+</div>
+
+
+<div class="card">
+
+<p>
+PS CSE HUB is a learning website created for
+Computer Science & Engineering students.
+</p>
+
+<p>
+Here you can find easy-to-understand notes,
+programming examples, important questions and
+practice material for your studies.
+</p>
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- SUBJECTS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>📚 What You Can Learn</h2>
+
+<p>
+Choose a subject and start learning.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- COMPUTER -->
+
+<div class="card">
+
+<div class="icon">💻</div>
+
+<h3>Computer Fundamentals</h3>
+
+<p>
+Computer basics, CPU, memory, hardware,
+software, operating systems and number systems.
+</p>
+
+<a href="computer-fundamentals.html"
+class="btn">
+View Notes
+</a>
+
+</div>
+
+
+<!-- PROGRAMMING -->
+
+<div class="card">
+
+<div class="icon">🧑‍💻</div>
+
+<h3>Programming</h3>
+
+<p>
+C programming, variables, data types,
+operators, conditions, loops, arrays and functions.
+</p>
+
+<a href="programming-notes.html"
+class="btn">
+View Notes
+</a>
+
+</div>
+
+
+<!-- MATHEMATICS -->
+
+<div class="card">
+
+<div class="icon">🔢</div>
+
+<h3>Engineering Mathematics</h3>
+
+<p>
+Matrices, determinants, eigenvalues,
+calculus, integration and differential equations.
+</p>
+
+<a href="mathematics-notes.html"
+class="btn">
+View Notes
+</a>
+
+</div>
+
+
+<!-- DIGITAL -->
+
+<div class="card">
+
+<div class="icon">⚡</div>
+
+<h3>Digital Electronics</h3>
+
+<p>
+Number systems, logic gates, Boolean algebra,
+truth tables, flip-flops, counters and registers.
+</p>
+
+<a href="digital-electronics.html"
+class="btn">
+View Notes
+</a>
+
+</div>
+
+
+<!-- ENVIRONMENT -->
+
+<div class="card">
+
+<div class="icon">🌱</div>
+
+<h3>Environment & Sustainability</h3>
+
+<p>
+Environment, ecosystem, pollution, natural resources,
+climate change, biodiversity and sustainability.
+</p>
+
+<a href="environment-notes.html"
+class="btn">
+View Notes
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🚀 Why PS CSE HUB?</h2>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<h3>📖 Easy Notes</h3>
+
+<p>
+Simple language and student-friendly explanations.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>💻 Coding Practice</h3>
+
+<p>
+Learn programming with practical examples.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📝 Important Questions</h3>
+
+<p>
+Prepare important topics for exams.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🎯 Regular Updates</h3>
+
+<p>
+More notes and practice material will be added.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section>
+
+<div class="container">
+
+<div class="card"
+style="text-align:center;">
+
+<h2>
+🚀 Start Learning Today
+</h2>
+
+<p>
+Explore the notes and improve your CSE skills
+one topic at a time.
+</p>
+
+<a href="cse-notes.html"
+class="btn">
+Open CSE Notes
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-    © 2026 <strong>PS CSE HUB</strong> | Created by PS
+
+<p>
+© 2026 <strong>PS CSE HUB</strong>
+</p>
+
+<p>
+Created by PS • Learn • Code • Build 🚀
+</p>
+
 </footer>
 
+
 </body>
-</html>
+
+    </html>
