@@ -7,11 +7,6 @@
 <title>Computer Fundamentals | PS CSE HUB</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -22,99 +17,69 @@ body{
 
 header{
     background:#050d18;
-    padding:18px 20px;
+    padding:25px 15px;
+    text-align:center;
     border-bottom:1px solid #24415f;
 }
 
-.header{
-    max-width:1000px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
+header h1{
     color:#39a7ff;
-    font-size:22px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:white;
-}
-
-header a{
-    color:#4db2ff;
-    text-decoration:none;
-}
-
-.hero{
-    text-align:center;
-    padding:60px 20px;
-    background:radial-gradient(circle at top,#124477,#07111f 65%);
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero span{
-    color:#39a7ff;
-}
-
-.hero p{
-    color:#b8c9da;
 }
 
 .container{
-    max-width:950px;
+    max-width:900px;
     margin:auto;
-    padding:40px 20px;
+    padding:25px 15px;
 }
 
-.topic{
+.card{
     background:#0c1b2d;
     border:1px solid #24415f;
-    border-radius:16px;
+    border-radius:15px;
     padding:25px;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
-.topic h2{
+.card h2{
     color:#4db2ff;
 }
 
-.topic h3{
+.card h3{
     color:#82caff;
-    margin-top:20px;
 }
 
-.topic p,
-.topic li{
-    color:#c3cfdb;
+.card p,
+.card li{
+    color:#c7d3df;
 }
 
-.topic ul,
-.topic ol{
-    padding-left:25px;
-}
-
-.question{
+.highlight{
     background:#07111f;
     border-left:4px solid #1688ff;
     padding:15px;
     margin-top:15px;
 }
 
-.back{
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border:1px solid #31506d;
+    padding:10px;
     text-align:center;
-    margin:40px 0;
+}
+
+th{
+    background:#12304d;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 25px;
+    margin-top:15px;
+    padding:11px 20px;
     background:#1688ff;
     color:white;
     text-decoration:none;
@@ -122,25 +87,9 @@ header a{
 }
 
 footer{
-    background:#030912;
     text-align:center;
     padding:30px;
     color:#8192a6;
-}
-
-footer strong{
-    color:#39a7ff;
-}
-
-@media(max-width:600px){
-    .header{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
 }
 </style>
 </head>
@@ -149,205 +98,197 @@ footer strong{
 
 <header>
 
-<div class="header">
+<h1>💻 Computer Fundamentals</h1>
 
-<div class="logo">
-PS <span>CSE HUB</span>
-</div>
-
-<a href="cse-notes.html">← CSE Notes</a>
-
-</div>
+<p>PS CSE HUB</p>
 
 </header>
 
 
-<section class="hero">
-
-<h1>Computer <span>Fundamentals</span></h1>
-
-<p>Complete beginner-friendly notes for CSE students.</p>
-
-</section>
+<div class="container">
 
 
-<main class="container">
+<div class="card">
 
-
-<div class="topic">
-
-<h2>1. What is a Computer?</h2>
+<h2>1. Introduction to Computer</h2>
 
 <p>
 A computer is an electronic device that accepts data as input,
-processes it according to instructions, stores information
-and produces useful output.
+processes it according to instructions, stores information and
+produces useful output.
 </p>
 
-<div class="question">
-<strong>Simple Formula:</strong><br>
-Input → Processing → Output
+<div class="highlight">
+<strong>Basic Working:</strong>
+Input → Processing → Output → Storage
 </div>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
 <h2>2. Characteristics of Computer</h2>
 
 <ul>
-<li><strong>Speed:</strong> Performs operations very quickly.</li>
-<li><strong>Accuracy:</strong> Produces accurate results when correct instructions are given.</li>
-<li><strong>Storage:</strong> Stores large amounts of data.</li>
-<li><strong>Diligence:</strong> Can perform repetitive tasks without getting tired.</li>
-<li><strong>Automation:</strong> Performs tasks automatically after receiving instructions.</li>
-<li><strong>Versatility:</strong> Can perform many different types of tasks.</li>
+<li>High Speed</li>
+<li>Accuracy</li>
+<li>Diligence</li>
+<li>Large Storage Capacity</li>
+<li>Automation</li>
+<li>Versatility</li>
+<li>Reliability</li>
 </ul>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>3. Types of Computers</h2>
+<h2>3. Generations of Computer</h2>
 
-<h3>Supercomputer</h3>
+<h3>First Generation</h3>
 <p>
-Very powerful computers used for scientific research,
-weather forecasting and complex calculations.
+Used vacuum tubes. These computers were very large and consumed
+a lot of electricity.
 </p>
 
-<h3>Mainframe Computer</h3>
+<h3>Second Generation</h3>
 <p>
-Used by large organizations to process huge amounts of data
-and support many users.
+Transistors replaced vacuum tubes, making computers smaller,
+faster and more reliable.
 </p>
 
-<h3>Personal Computer</h3>
+<h3>Third Generation</h3>
 <p>
-Computers designed for individual users, such as desktops
-and laptops.
+Integrated Circuits (ICs) were introduced.
 </p>
 
-<h3>Embedded Computer</h3>
+<h3>Fourth Generation</h3>
 <p>
-Computers built into other devices such as cars,
-washing machines and smart devices.
+Microprocessors were introduced and personal computers became common.
+</p>
+
+<h3>Fifth Generation</h3>
+<p>
+Focuses on advanced technologies such as artificial intelligence,
+natural language processing and parallel processing.
 </p>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>4. Hardware and Software</h2>
-
-<h3>Hardware</h3>
-
-<p>
-Hardware means the physical components of a computer that
-can be seen and touched.
-</p>
+<h2>4. Types of Computer</h2>
 
 <ul>
-<li>Keyboard</li>
-<li>Mouse</li>
-<li>Monitor</li>
-<li>CPU</li>
-<li>RAM</li>
-<li>SSD / Hard Disk</li>
+<li>Supercomputer</li>
+<li>Mainframe Computer</li>
+<li>Minicomputer</li>
+<li>Microcomputer</li>
+<li>Desktop Computer</li>
+<li>Laptop</li>
+<li>Tablet</li>
+<li>Smartphone</li>
 </ul>
 
-<h3>Software</h3>
+</div>
+
+
+<div class="card">
+
+<h2>5. CPU — Central Processing Unit</h2>
 
 <p>
-Software is a collection of programs and instructions
-that tell the computer what to do.
+CPU is often called the brain of the computer. It executes
+instructions and performs processing operations.
 </p>
+
+<h3>Main Parts of CPU</h3>
 
 <ul>
-<li>Operating System</li>
-<li>Web Browser</li>
-<li>Media Player</li>
-<li>Programming Software</li>
+<li>ALU — Arithmetic Logic Unit</li>
+<li>CU — Control Unit</li>
+<li>Registers</li>
 </ul>
 
+<div class="highlight">
+<strong>ALU:</strong> Performs arithmetic and logical operations.
+<br>
+<strong>CU:</strong> Controls and coordinates computer operations.
+<br>
+<strong>Registers:</strong> Small, high-speed storage locations inside the CPU.
 </div>
-
-
-<div class="topic">
-
-<h2>5. CPU</h2>
-
-<p>
-CPU stands for <strong>Central Processing Unit</strong>.
-It processes instructions and controls the operations
-of the computer.
-</p>
-
-<h3>ALU</h3>
-<p>
-Arithmetic Logic Unit performs arithmetic and logical operations.
-</p>
-
-<h3>CU</h3>
-<p>
-Control Unit controls and coordinates different operations
-of the computer.
-</p>
-
-<h3>Registers</h3>
-<p>
-Registers are very fast small storage locations inside
-the processor.
-</p>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>6. Memory</h2>
+<h2>6. Computer Memory</h2>
+
+<p>
+Memory is used to store data, instructions and results.
+</p>
 
 <h3>Primary Memory</h3>
 
-<p>
-Primary memory is directly accessible by the CPU.
-RAM and ROM are examples.
-</p>
-
-<h3>RAM</h3>
-
-<p>
-RAM stands for Random Access Memory. It temporarily stores
-data and instructions currently being used.
-</p>
-
-<h3>ROM</h3>
-
-<p>
-ROM stands for Read Only Memory. It stores information
-that generally remains available even after power is removed.
-</p>
+<ul>
+<li>RAM</li>
+<li>ROM</li>
+<li>Cache Memory</li>
+</ul>
 
 <h3>Secondary Memory</h3>
 
-<p>
-Used for long-term storage of data.
-Examples include SSD, HDD, pen drives and memory cards.
-</p>
+<ul>
+<li>Hard Disk</li>
+<li>SSD</li>
+<li>Pen Drive</li>
+<li>Memory Card</li>
+</ul>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>7. Input Devices</h2>
+<h2>7. RAM and ROM</h2>
+
+<table>
+
+<tr>
+<th>RAM</th>
+<th>ROM</th>
+</tr>
+
+<tr>
+<td>Volatile Memory</td>
+<td>Non-Volatile Memory</td>
+</tr>
+
+<tr>
+<td>Data is lost when power is removed</td>
+<td>Data is retained without power</td>
+</tr>
+
+<tr>
+<td>Used for temporary working data</td>
+<td>Stores firmware/instructions</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>8. Input Devices</h2>
 
 <p>
-Input devices are used to enter data and instructions
-into a computer.
+Input devices are used to enter data and instructions into a computer.
 </p>
 
 <ul>
@@ -362,13 +303,12 @@ into a computer.
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>8. Output Devices</h2>
+<h2>9. Output Devices</h2>
 
 <p>
-Output devices display or provide the result produced
-by a computer.
+Output devices present processed information to the user.
 </p>
 
 <ul>
@@ -382,13 +322,42 @@ by a computer.
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>9. Operating System</h2>
+<h2>10. Hardware and Software</h2>
+
+<h3>Hardware</h3>
 
 <p>
-An Operating System, or OS, is system software that manages
-computer hardware and provides services to application programs.
+Hardware refers to the physical components of a computer
+that can be seen and touched.
+</p>
+
+<p>
+Examples: Keyboard, mouse, monitor, CPU and motherboard.
+</p>
+
+<h3>Software</h3>
+
+<p>
+Software is a collection of programs and instructions that
+tell a computer what to do.
+</p>
+
+<p>
+Examples: Operating systems, web browsers and applications.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>11. Operating System</h2>
+
+<p>
+An operating system is system software that manages computer
+hardware and provides services for application programs.
 </p>
 
 <h3>Examples</h3>
@@ -404,61 +373,84 @@ computer hardware and provides services to application programs.
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>10. Number Systems</h2>
-
-<p>
-A number system is a method used to represent numbers.
-Computers mainly use the binary number system.
-</p>
+<h2>12. Functions of Operating System</h2>
 
 <ul>
-<li><strong>Binary:</strong> Base 2 — 0, 1</li>
-<li><strong>Decimal:</strong> Base 10 — 0 to 9</li>
-<li><strong>Octal:</strong> Base 8 — 0 to 7</li>
-<li><strong>Hexadecimal:</strong> Base 16 — 0 to 9 and A to F</li>
+<li>Process Management</li>
+<li>Memory Management</li>
+<li>File Management</li>
+<li>Device Management</li>
+<li>Security</li>
+<li>User Interface</li>
 </ul>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>11. Generations of Computers</h2>
+<h2>13. Number System</h2>
 
-<ol>
-<li><strong>First Generation:</strong> Vacuum Tubes</li>
-<li><strong>Second Generation:</strong> Transistors</li>
-<li><strong>Third Generation:</strong> Integrated Circuits</li>
-<li><strong>Fourth Generation:</strong> Microprocessors</li>
-<li><strong>Fifth Generation:</strong> Advanced computing and AI-oriented technologies</li>
-</ol>
+<p>
+A number system is a method of representing numbers using
+a specific set of digits and a base.
+</p>
+
+<ul>
+<li>Binary — Base 2</li>
+<li>Octal — Base 8</li>
+<li>Decimal — Base 10</li>
+<li>Hexadecimal — Base 16</li>
+</ul>
+
+<div class="highlight">
+<strong>Example:</strong>
+Decimal 10 = Binary 1010
+</div>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>12. Important Exam Questions</h2>
+<h2>14. Important Units of Memory</h2>
+
+<ul>
+<li>1 Bit = 0 or 1</li>
+<li>1 Byte = 8 Bits</li>
+<li>1 KB = 1024 Bytes</li>
+<li>1 MB = 1024 KB</li>
+<li>1 GB = 1024 MB</li>
+<li>1 TB = 1024 GB</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>15. Important Exam Questions</h2>
 
 <ol>
 <li>What is a computer?</li>
 <li>Explain the characteristics of a computer.</li>
+<li>Explain the generations of computers.</li>
 <li>What is CPU? Explain its components.</li>
+<li>Differentiate between RAM and ROM.</li>
+<li>What is computer memory?</li>
 <li>Differentiate between hardware and software.</li>
-<li>What is RAM and ROM?</li>
-<li>Explain primary and secondary memory.</li>
 <li>What is an operating system?</li>
-<li>Explain different types of computers.</li>
-<li>What are input and output devices?</li>
+<li>Explain the functions of an operating system.</li>
 <li>Explain different number systems.</li>
+<li>What are input and output devices?</li>
 </ol>
 
 </div>
 
 
-<div class="back">
+<div style="text-align:center;margin:35px 0;">
 
 <a href="cse-notes.html" class="btn">
 ← Back to CSE Notes
@@ -466,16 +458,17 @@ Computers mainly use the binary number system.
 
 </div>
 
-</main>
+
+</div>
 
 
 <footer>
 
-<p>© 2026 <strong>PS CSE HUB</strong></p>
+<p>© 2026 PS CSE HUB</p>
 
 <p>Created by PS • Learn • Code • Build 🚀</p>
 
 </footer>
 
 </body>
-                                           </html>
+    </html>
