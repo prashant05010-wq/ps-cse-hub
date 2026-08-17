@@ -7,11 +7,6 @@
 <title>Engineering Mathematics | PS CSE HUB</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -22,141 +17,72 @@ body{
 
 header{
     background:#050d18;
-    padding:18px 20px;
+    padding:25px 15px;
+    text-align:center;
     border-bottom:1px solid #24415f;
 }
 
-.nav{
-    max-width:1000px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
+header h1{
     color:#39a7ff;
-    font-size:23px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:white;
-}
-
-.nav a{
-    color:#d5e4f2;
-    text-decoration:none;
-}
-
-.hero{
-    text-align:center;
-    padding:60px 20px;
-    background:radial-gradient(circle at top,#124477,#07111f 65%);
-}
-
-.hero h1{
-    font-size:43px;
-    margin:0 0 10px;
-}
-
-.hero h1 span{
-    color:#39a7ff;
-}
-
-.hero p{
-    color:#b8c9da;
 }
 
 .container{
-    max-width:950px;
+    max-width:900px;
     margin:auto;
-    padding:40px 20px;
+    padding:25px 15px;
 }
 
-.topic{
+.card{
     background:#0c1b2d;
     border:1px solid #24415f;
-    border-radius:16px;
-    padding:27px;
-    margin-bottom:25px;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
 }
 
-.topic h2{
+.card h2{
     color:#4db2ff;
 }
 
-.topic h3{
+.card h3{
     color:#82caff;
-    margin-top:20px;
 }
 
-.topic p,
-.topic li{
-    color:#c3cfdb;
-}
-
-.topic ul,
-.topic ol{
-    padding-left:25px;
+.card p,
+.card li{
+    color:#c7d3df;
 }
 
 .formula{
     background:#020811;
-    border:1px solid #203c59;
-    border-radius:10px;
-    padding:18px;
-    overflow-x:auto;
-    color:#d8e8f5;
+    border-left:4px solid #1688ff;
+    padding:15px;
+    margin:15px 0;
     font-family:monospace;
+    overflow-x:auto;
 }
 
-.question{
+.example{
     background:#07111f;
-    border-left:4px solid #1688ff;
+    border-left:4px solid #39a7ff;
     padding:15px;
     margin-top:15px;
 }
 
 .btn{
     display:inline-block;
-    padding:11px 23px;
+    margin-top:15px;
+    padding:11px 20px;
     background:#1688ff;
     color:white;
     text-decoration:none;
     border-radius:25px;
 }
 
-.back{
-    text-align:center;
-    margin:40px 0;
-}
-
 footer{
-    background:#030912;
     text-align:center;
     padding:30px;
     color:#8192a6;
-}
-
-footer strong{
-    color:#39a7ff;
-}
-
-@media(max-width:600px){
-
-    .nav{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .topic{
-        padding:21px;
-    }
 }
 </style>
 </head>
@@ -165,36 +91,17 @@ footer strong{
 
 <header>
 
-<div class="nav">
+<h1>🔢 Engineering Mathematics</h1>
 
-<div class="logo">
-PS <span>CSE HUB</span>
-</div>
-
-<a href="cse-notes.html">← CSE Notes</a>
-
-</div>
+<p>PS CSE HUB</p>
 
 </header>
 
 
-<section class="hero">
-
-<h1>
-Engineering <span>Mathematics</span>
-</h1>
-
-<p>
-Important mathematics concepts and formulas for BTech CSE students.
-</p>
-
-</section>
+<div class="container">
 
 
-<main class="container">
-
-
-<div class="topic">
+<div class="card">
 
 <h2>1. Matrices</h2>
 
@@ -203,19 +110,12 @@ A matrix is a rectangular arrangement of numbers or elements
 in rows and columns.
 </p>
 
-<h3>Example</h3>
-
 <div class="formula">
-A = [ 1  2
-      3  4 ]
+A = [ a  b ]
+    [ c  d ]
 </div>
 
-<p>
-The matrix above has 2 rows and 2 columns, so its order is
-2 × 2.
-</p>
-
-<h3>Important Types</h3>
+<h3>Types of Matrices</h3>
 
 <ul>
 <li>Row Matrix</li>
@@ -229,111 +129,260 @@ The matrix above has 2 rows and 2 columns, so its order is
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>2. Determinants</h2>
+<h2>2. Matrix Addition</h2>
 
 <p>
-A determinant is a scalar value associated with a square matrix.
+Two matrices can be added when they have the same order.
+Corresponding elements are added.
 </p>
 
-<h3>For a 2 × 2 Matrix</h3>
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+A = [1  2]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[3  4]
+</p>
+
+<p>
+B = [5  6]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[7  8]
+</p>
+
+<p>
+A + B = [6  8]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10 12]
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>3. Determinant of a 2 × 2 Matrix</h2>
 
 <div class="formula">
-| a  b |
-| c  d |
-
-Determinant = ad - bc
+|a  b|
+|c  d| = ad - bc
 </div>
 
-<div class="question">
-<strong>Example:</strong><br>
-For | 2  3 |<br>
-&nbsp;&nbsp;&nbsp;&nbsp;| 1  4 |<br><br>
-Determinant = (2 × 4) - (3 × 1) = 5
-</div>
+<div class="example">
 
-</div>
-
-
-<div class="topic">
-
-<h2>3. Limits</h2>
+<strong>Example:</strong>
 
 <p>
-A limit describes the value that a function approaches
-as the input approaches a particular value.
+A = [2  3]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[1  4]
+</p>
+
+<p>
+|A| = (2 × 4) - (3 × 1)
+</p>
+
+<p>
+|A| = 8 - 3 = <strong>5</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>4. Inverse of a Matrix</h2>
+
+<p>
+For a 2 × 2 matrix:
 </p>
 
 <div class="formula">
-lim x→a f(x)
+A = [a  b]
+    [c  d]
+
+A⁻¹ = 1/(ad-bc) [ d  -b ]
+                  [ -c  a ]
 </div>
 
 <p>
-Limits are an important foundation for calculus.
+The inverse exists when the determinant is not zero.
 </p>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>4. Differentiation</h2>
+<h2>5. Eigenvalues</h2>
 
 <p>
-Differentiation is used to find the rate of change of a function.
+Eigenvalues of a square matrix are obtained from the
+characteristic equation.
 </p>
 
-<h3>Basic Formulas</h3>
+<div class="formula">
+|A - λI| = 0
+</div>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+For a simple matrix, form the characteristic equation
+and solve it to obtain the values of λ.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>6. Eigenvectors</h2>
+
+<p>
+For an eigenvalue λ, the corresponding eigenvector X satisfies:
+</p>
+
+<div class="formula">
+AX = λX
+</div>
+
+<p>
+or equivalently:
+</p>
+
+<div class="formula">
+(A - λI)X = 0
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>7. Differential Calculus</h2>
+
+<p>
+Differentiation measures the rate at which one quantity
+changes with respect to another.
+</p>
 
 <div class="formula">
 d/dx (xⁿ) = n xⁿ⁻¹
-
-d/dx (sin x) = cos x
-
-d/dx (cos x) = -sin x
-
-d/dx (eˣ) = eˣ
-
-d/dx (ln x) = 1/x
 </div>
 
+<h3>Important Rules</h3>
+
+<ul>
+<li>d/dx(c) = 0</li>
+<li>d/dx(x) = 1</li>
+<li>d/dx(xⁿ) = n xⁿ⁻¹</li>
+<li>d/dx(sin x) = cos x</li>
+<li>d/dx(cos x) = -sin x</li>
+<li>d/dx(eˣ) = eˣ</li>
+</ul>
+
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>5. Integration</h2>
+<h2>8. Example of Differentiation</h2>
+
+<div class="example">
 
 <p>
-Integration is the reverse process of differentiation and is
-used to calculate areas and many other quantities.
+Find the derivative of:
 </p>
 
-<h3>Basic Formulas</h3>
-
 <div class="formula">
-∫ xⁿ dx = xⁿ⁺¹/(n+1) + C
-
-∫ 1/x dx = ln|x| + C
-
-∫ sin x dx = -cos x + C
-
-∫ cos x dx = sin x + C
-
-∫ eˣ dx = eˣ + C
+y = x³ + 2x² + 5x
 </div>
-
-</div>
-
-
-<div class="topic">
-
-<h2>6. Differential Equations</h2>
 
 <p>
-A differential equation is an equation involving a function
-and one or more of its derivatives.
+Differentiate each term:
+</p>
+
+<div class="formula">
+dy/dx = 3x² + 4x + 5
+</div>
+
+<strong>Answer: 3x² + 4x + 5</strong>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>9. Integration</h2>
+
+<p>
+Integration is the reverse process of differentiation.
+</p>
+
+<div class="formula">
+∫xⁿ dx = xⁿ⁺¹/(n+1) + C
+</div>
+
+<h3>Important Formulas</h3>
+
+<ul>
+<li>∫1 dx = x + C</li>
+<li>∫x dx = x²/2 + C</li>
+<li>∫eˣ dx = eˣ + C</li>
+<li>∫sin x dx = -cos x + C</li>
+<li>∫cos x dx = sin x + C</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>10. Example of Integration</h2>
+
+<div class="example">
+
+<p>
+Find:
+</p>
+
+<div class="formula">
+∫(3x² + 2x) dx
+</div>
+
+<p>
+Integrating term by term:
+</p>
+
+<div class="formula">
+= x³ + x² + C
+</div>
+
+<strong>Answer: x³ + x² + C</strong>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>11. Differential Equations</h2>
+
+<p>
+A differential equation is an equation involving derivatives
+of an unknown function.
 </p>
 
 <h3>Example</h3>
@@ -343,8 +392,7 @@ dy/dx = 2x
 </div>
 
 <p>
-Integrating both sides gives:
-
+Integrating both sides:
 </p>
 
 <div class="formula">
@@ -354,81 +402,113 @@ y = x² + C
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>7. Vector Basics</h2>
-
-<p>
-A vector is a quantity that has both magnitude and direction.
-</p>
-
-<h3>Examples</h3>
-
-<ul>
-<li>Velocity</li>
-<li>Force</li>
-<li>Displacement</li>
-<li>Acceleration</li>
-</ul>
-
-<h3>Vector Form</h3>
-
-<div class="formula">
-A = ai + bj + ck
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h2>8. Important Mathematics Formulas</h2>
+<h2>12. Important Mathematical Formulas</h2>
 
 <div class="formula">
 (a + b)² = a² + 2ab + b²
+</div>
 
+<div class="formula">
 (a - b)² = a² - 2ab + b²
+</div>
 
+<div class="formula">
 a² - b² = (a-b)(a+b)
+</div>
 
-sin²x + cos²x = 1
+<div class="formula">
+sin²θ + cos²θ = 1
+</div>
 
-1 + tan²x = sec²x
+<div class="formula">
+1 + tan²θ = sec²θ
+</div>
 
-1 + cot²x = cosec²x
+<div class="formula">
+1 + cot²θ = cosec²θ
 </div>
 
 </div>
 
 
-<div class="topic">
+<div class="card">
 
-<h2>9. Practice Questions</h2>
+<h2>13. Important Questions</h2>
 
 <ol>
-
+<li>What is a matrix?</li>
+<li>Explain different types of matrices.</li>
 <li>Find the determinant of a 2 × 2 matrix.</li>
-
-<li>Find the derivative of x³ + 2x² + 5.</li>
-
-<li>Integrate 3x² + 4x.</li>
-
-<li>Solve a simple first-order differential equation.</li>
-
-<li>Find the order of a given matrix.</li>
-
-<li>Evaluate basic limits.</li>
-
-<li>Simplify trigonometric identities.</li>
-
-<li>Find the magnitude of a vector.</li>
-
+<li>Find the inverse of a matrix.</li>
+<li>What are eigenvalues and eigenvectors?</li>
+<li>Differentiate a given polynomial.</li>
+<li>State important differentiation formulas.</li>
+<li>Evaluate an indefinite integral.</li>
+<li>State important integration formulas.</li>
+<li>What is a differential equation?</li>
 </ol>
 
 </div>
 
 
-<div class="back">
+<div class="card">
+
+<h2>14. Practice Questions</h2>
+
+<h3>Question 1</h3>
+
+<p>
+Find the determinant:
+</p>
+
+<div class="formula">
+|2  5|
+|1  3|
+</div>
+
+<p>
+<strong>Answer:</strong>
+(2×3) - (5×1) = 6 - 5 = 1
+</p>
+
+
+<h3>Question 2</h3>
+
+<p>
+Differentiate:
+</p>
+
+<div class="formula">
+y = x⁴ + 3x²
+</div>
+
+<p>
+<strong>Answer:</strong>
+dy/dx = 4x³ + 6x
+</p>
+
+
+<h3>Question 3</h3>
+
+<p>
+Integrate:
+</p>
+
+<div class="formula">
+∫2x dx
+</div>
+
+<p>
+<strong>Answer:</strong>
+x² + C
+</p>
+
+</div>
+
+
+<div style="text-align:center;margin:35px 0;">
 
 <a href="cse-notes.html" class="btn">
 ← Back to CSE Notes
@@ -436,16 +516,17 @@ sin²x + cos²x = 1
 
 </div>
 
-</main>
+
+</div>
 
 
 <footer>
 
-<p>© 2026 <strong>PS CSE HUB</strong></p>
+<p>© 2026 PS CSE HUB</p>
 
 <p>Created by PS • Learn • Code • Build 🚀</p>
 
 </footer>
 
 </body>
-  </html>
+    </html>
