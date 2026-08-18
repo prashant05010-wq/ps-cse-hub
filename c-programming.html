@@ -568,6 +568,288 @@ Regular practice will improve your programming logic.
 Write a C program to display grades according to marks:
 A for 75 or above, B for 60–74, and C below 60.
 </p>
+<!-- C PROGRAMMING MINI PROJECTS -->
+
+<section class="lesson">
+
+<h2>🚀 C Programming Mini Projects</h2>
+
+<h3>🧮 1. Simple Calculator</h3>
+
+<p>
+Create a simple calculator that can perform addition,
+subtraction, multiplication and division.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float a, b;
+    char op;
+
+    printf("Enter first number: ");
+    scanf("%f", &amp;a);
+
+    printf("Enter operator (+ - * /): ");
+    scanf(" %c", &amp;op);
+
+    printf("Enter second number: ");
+    scanf("%f", &amp;b);
+
+    switch(op)
+    {
+        case '+':
+            printf("Result = %.2f", a + b);
+            break;
+
+        case '-':
+            printf("Result = %.2f", a - b);
+            break;
+
+        case '*':
+            printf("Result = %.2f", a * b);
+            break;
+
+        case '/':
+            if(b != 0)
+                printf("Result = %.2f", a / b);
+            else
+                printf("Cannot divide by zero");
+            break;
+
+        default:
+            printf("Invalid operator");
+    }
+
+    return 0;
+}
+</code></pre>
+
+
+<h3>🎓 2. Student Grade System</h3>
+
+<p>
+Enter marks and calculate the student's grade.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int marks;
+
+    printf("Enter marks: ");
+    scanf("%d", &amp;marks);
+
+    if(marks &gt;= 75)
+        printf("Grade A");
+    else if(marks &gt;= 60)
+        printf("Grade B");
+    else
+        printf("Grade C");
+
+    return 0;
+}
+</code></pre>
+
+
+<h3>🎯 3. Number Guessing Game</h3>
+
+<p>
+The user tries to guess a secret number.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int secret = 7;
+    int guess;
+
+    printf("Guess the number (1-10): ");
+    scanf("%d", &amp;guess);
+
+    if(guess == secret)
+        printf("Correct! You won.");
+    else
+        printf("Wrong guess!");
+
+    return 0;
+}
+</code></pre>
+
+
+<h3>📝 4. Simple Quiz Program</h3>
+
+<p>
+Answer simple C programming questions and get your score.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int answer;
+    int score = 0;
+
+    printf("What is the correct function to print output in C?\n");
+    printf("1. scanf()\n");
+    printf("2. printf()\n");
+    printf("3. input()\n");
+
+    printf("Enter your answer: ");
+    scanf("%d", &amp;answer);
+
+    if(answer == 2)
+    {
+        printf("Correct!\n");
+        score++;
+    }
+    else
+    {
+        printf("Wrong answer!\n");
+    }
+
+    printf("Your Score = %d", score);
+
+    return 0;
+}
+</code></pre>
+
+
+<h3>🏦 5. Simple Bank Management</h3>
+
+<p>
+A basic program to deposit, withdraw and display balance.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float balance = 1000;
+    float amount;
+    int choice;
+
+    printf("1. Deposit\n");
+    printf("2. Withdraw\n");
+    printf("3. Check Balance\n");
+
+    printf("Enter choice: ");
+    scanf("%d", &amp;choice);
+
+    if(choice == 1)
+    {
+        printf("Enter amount: ");
+        scanf("%f", &amp;amount);
+
+        balance = balance + amount;
+
+        printf("Balance = %.2f", balance);
+    }
+    else if(choice == 2)
+    {
+        printf("Enter amount: ");
+        scanf("%f", &amp;amount);
+
+        if(amount &lt;= balance)
+        {
+            balance = balance - amount;
+            printf("Balance = %.2f", balance);
+        }
+        else
+        {
+            printf("Insufficient balance");
+        }
+    }
+    else if(choice == 3)
+    {
+        printf("Balance = %.2f", balance);
+    }
+    else
+    {
+        printf("Invalid choice");
+    }
+
+    return 0;
+}
+</code></pre>
+
+
+<h3>📊 6. Student Result System</h3>
+
+<p>
+Calculate total marks, percentage and grade of a student.
+</p>
+
+<pre><code>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float m1, m2, m3;
+    float total, percentage;
+
+    printf("Enter marks of 3 subjects: ");
+    scanf("%f %f %f", &amp;m1, &amp;m2, &amp;m3);
+
+    total = m1 + m2 + m3;
+    percentage = total / 3;
+
+    printf("Total = %.2f\n", total);
+    printf("Percentage = %.2f%%\n", percentage);
+
+    if(percentage &gt;= 75)
+        printf("Grade A");
+    else if(percentage &gt;= 60)
+        printf("Grade B");
+    else
+        printf("Grade C");
+
+    return 0;
+}
+</code></pre>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="lesson">
+
+<h2>📝 Important C Programming Questions</h2>
+
+<ul>
+
+<li>What is C programming?</li>
+
+<li>What are variables and data types in C?</li>
+
+<li>Explain different types of operators in C.</li>
+
+<li>What is the difference between while and do-while loop?</li>
+
+<li>What is an array in C?</li>
+
+<li>What is a function in C?</li>
+
+<li>What is the difference between compiler and interpreter?</li>
+
+<li>What is the use of printf() and scanf()?</li>
+
+<li>What is a pointer in C?</li>
+
+<li>What is recursion in C?</li>
+
+</ul>
+
+    </section>
 
                                                                              </section></main>
 
