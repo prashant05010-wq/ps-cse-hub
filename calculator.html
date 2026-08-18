@@ -491,15 +491,19 @@ function calculate(){
 
         expression =
         expression.replaceAll("ln(","Math.log(");
-
-
-        expression =
-        expression.replaceAll(
-            "sin(",
-            degreeMode ?
-            "Math.sin(Math.PI/180*(" :
-            "Math.sin("
-        );
+       if (degreeMode) {
+    expression = expression.replace(
+        /sin\(([^()]*)\)/g,
+        function(match, value) {
+            return "Math.sin((" + value + ")*Math.PI/180)";
+        }
+    );
+} else {
+    expression = expression.replaceAll("sin(", "Math.sin(");
+}
+ 
+        
+    
 
 
         expression =
