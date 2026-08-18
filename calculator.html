@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculator | PS CSE HUB</title>
+<title>Scientific Calculator | PS CSE HUB</title>
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
     margin:0;
+    font-family:Arial,sans-serif;
     background:linear-gradient(135deg,#e0f2fe,#f8fafc);
 }
 
@@ -20,9 +20,9 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    padding:18px 7%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .logo{
@@ -32,15 +32,15 @@ body{
 
 .nav a{
     text-decoration:none;
-    margin-left:20px;
     color:#222;
+    margin-left:18px;
     font-weight:bold;
 }
 
 .container{
-    max-width:500px;
-    margin:50px auto;
-    padding:20px;
+    max-width:650px;
+    margin:35px auto;
+    padding:15px;
 }
 
 h1{
@@ -48,55 +48,92 @@ h1{
 }
 
 .calculator{
-    background:white;
-    padding:25px;
+    background:#1f2937;
+    padding:20px;
     border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.12);
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 #display{
     width:100%;
-    height:60px;
+    height:70px;
+    box-sizing:border-box;
+    border:none;
+    border-radius:10px;
+    margin-bottom:15px;
+    padding:10px;
     font-size:28px;
     text-align:right;
-    margin-bottom:15px;
-    border:2px solid #ddd;
-    border-radius:10px;
-    padding:0 10px;
-    box-sizing:border-box;
+    background:#f8fafc;
+}
+
+.mode{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.mode button{
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
 }
 
 .buttons{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
 }
 
 button{
-    height:60px;
-    font-size:20px;
+    min-height:52px;
     border:none;
-    border-radius:10px;
+    border-radius:8px;
+    font-size:16px;
     cursor:pointer;
-    background:#f1f5f9;
 }
 
 button:hover{
-    opacity:0.8;
+    opacity:.8;
+}
+
+.number{
+    background:#f8fafc;
+}
+
+.function{
+    background:#dbeafe;
+}
+
+.operator{
+    background:#fde68a;
 }
 
 .equal{
-    grid-column:span 2;
+    background:#86efac;
 }
 
 .clear{
-    grid-column:span 2;
+    background:#fca5a5;
 }
 
 footer{
     text-align:center;
     padding:25px;
-    margin-top:40px;
+}
+
+@media(max-width:500px){
+
+    .buttons{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    button{
+        min-height:48px;
+        font-size:14px;
+    }
+
 }
 
 </style>
@@ -129,95 +166,187 @@ PS CSE HUB
 
 <div class="container">
 
-<h1>🧮 Online Calculator</h1>
+<h1>🧮 Scientific Calculator</h1>
 
 <p style="text-align:center;">
-Calculate quickly with PS CSE HUB.
+PS CSE HUB Scientific Calculator
 </p>
 
 
 <div class="calculator">
 
-<input type="text" id="display" readonly>
+
+<input id="display" readonly>
+
+
+<div class="mode">
+
+<button onclick="toggleDegree()">
+<span id="modeText">DEG</span>
+</button>
+
+<button onclick="clearDisplay()" class="clear">
+AC
+</button>
+
+</div>
 
 
 <div class="buttons">
 
-<button onclick="clearDisplay()" class="clear">
-C
+
+<button class="function" onclick="append('sin(')">
+sin
 </button>
 
-<button onclick="deleteLast()">
+<button class="function" onclick="append('cos(')">
+cos
+</button>
+
+<button class="function" onclick="append('tan(')">
+tan
+</button>
+
+<button class="function" onclick="append('log(')">
+log
+</button>
+
+<button class="function" onclick="append('ln(')">
+ln
+</button>
+
+
+<button class="function" onclick="append('asin(')">
+sin⁻¹
+</button>
+
+<button class="function" onclick="append('acos(')">
+cos⁻¹
+</button>
+
+<button class="function" onclick="append('atan(')">
+tan⁻¹
+</button>
+
+<button class="function" onclick="append('sqrt(')">
+√
+</button>
+
+<button class="function" onclick="append('^2')">
+x²
+</button>
+
+
+<button class="function" onclick="append('^')">
+xʸ
+</button>
+
+<button class="function" onclick="append('PI')">
+π
+</button>
+
+<button class="function" onclick="append('E')">
+e
+</button>
+
+<button class="function" onclick="append('10^')">
+10ˣ
+</button>
+
+<button class="function" onclick="append('EXP')">
+EXP
+</button>
+
+
+<button class="function" onclick="append('(')">
+(
+</button>
+
+<button class="function" onclick="append(')')">
+)
+</button>
+
+<button class="function" onclick="backspace()">
 ⌫
 </button>
 
-<button onclick="appendValue('/')">
+<button class="operator" onclick="append('/')">
 ÷
 </button>
 
-
-<button onclick="appendValue('7')">
-7
-</button>
-
-<button onclick="appendValue('8')">
-8
-</button>
-
-<button onclick="appendValue('9')">
-9
-</button>
-
-<button onclick="appendValue('*')">
+<button class="operator" onclick="append('*')">
 ×
 </button>
 
 
-<button onclick="appendValue('4')">
-4
+<button class="number" onclick="append('7')">
+7
 </button>
 
-<button onclick="appendValue('5')">
-5
+<button class="number" onclick="append('8')">
+8
 </button>
 
-<button onclick="appendValue('6')">
-6
+<button class="number" onclick="append('9')">
+9
 </button>
 
-<button onclick="appendValue('-')">
+<button class="operator" onclick="append('-')">
 −
 </button>
 
-
-<button onclick="appendValue('1')">
-1
+<button class="function" onclick="append('%')">
+%
 </button>
 
-<button onclick="appendValue('2')">
-2
+
+<button class="number" onclick="append('4')">
+4
 </button>
 
-<button onclick="appendValue('3')">
-3
+<button class="number" onclick="append('5')">
+5
 </button>
 
-<button onclick="appendValue('+')">
+<button class="number" onclick="append('6')">
+6
+</button>
+
+<button class="operator" onclick="append('+')">
 +
 </button>
 
+<button class="function" onclick="factorial()">
+x!
+</button>
 
-<button onclick="appendValue('0')">
+
+<button class="number" onclick="append('1')">
+1
+</button>
+
+<button class="number" onclick="append('2')">
+2
+</button>
+
+<button class="number" onclick="append('3')">
+3
+</button>
+
+<button class="number" onclick="append('0')">
 0
 </button>
 
-<button onclick="appendValue('.')">
+<button class="number" onclick="append('.')">
 .
 </button>
 
-<button onclick="calculate()" class="equal">
+
+<button class="equal" style="grid-column:span 5;"
+onclick="calculate()">
 =
 </button>
+
 
 </div>
 
@@ -241,7 +370,10 @@ Created by PS • Learn • Code • Build 🚀
 
 <script>
 
-function appendValue(value){
+let degreeMode = true;
+
+
+function append(value){
 
     document.getElementById("display").value += value;
 
@@ -255,30 +387,168 @@ function clearDisplay(){
 }
 
 
-function deleteLast(){
+function backspace(){
 
-    let display = document.getElementById("display");
+    let display =
+    document.getElementById("display");
 
-    display.value = display.value.slice(0,-1);
+    display.value =
+    display.value.slice(0,-1);
+
+}
+
+
+function toggleDegree(){
+
+    degreeMode = !degreeMode;
+
+    document.getElementById("modeText").innerText =
+    degreeMode ? "DEG" : "RAD";
+
+}
+
+
+function factorial(){
+
+    let display =
+    document.getElementById("display");
+
+    let n = Number(display.value);
+
+    if(n < 0 || !Number.isInteger(n)){
+
+        display.value = "Error";
+
+        return;
+
+    }
+
+    let result = 1;
+
+    for(let i=1;i<=n;i++){
+
+        result *= i;
+
+    }
+
+    display.value = result;
 
 }
 
 
 function calculate(){
 
-    let display = document.getElementById("display");
+    let expression =
+    document.getElementById("display").value;
 
     try{
 
-        display.value = Function(
-            '"use strict"; return (' + display.value + ')'
+        expression =
+        expression.replaceAll("PI", "Math.PI");
+
+        expression =
+        expression.replaceAll("E", "Math.E");
+
+        expression =
+        expression.replaceAll("sqrt", "Math.sqrt");
+
+        expression =
+        expression.replaceAll("log", "Math.log10");
+
+        expression =
+        expression.replaceAll("ln", "Math.log");
+
+        expression =
+        expression.replaceAll("sin", "sin");
+
+        expression =
+        expression.replaceAll("cos", "cos");
+
+        expression =
+        expression.replaceAll("tan", "tan");
+
+        expression =
+        expression.replaceAll("asin", "asin");
+
+        expression =
+        expression.replaceAll("acos", "acos");
+
+        expression =
+        expression.replaceAll("atan", "atan");
+
+        expression =
+        expression.replaceAll("^", "**");
+
+        expression =
+        expression.replaceAll("EXP", "*10**");
+
+        function sin(x){
+
+            return degreeMode ?
+            Math.sin(x*Math.PI/180) :
+            Math.sin(x);
+
+        }
+
+        function cos(x){
+
+            return degreeMode ?
+            Math.cos(x*Math.PI/180) :
+            Math.cos(x);
+
+        }
+
+        function tan(x){
+
+            return degreeMode ?
+            Math.tan(x*Math.PI/180) :
+            Math.tan(x);
+
+        }
+
+        function asin(x){
+
+            let result = Math.asin(x);
+
+            return degreeMode ?
+            result*180/Math.PI :
+            result;
+
+        }
+
+        function acos(x){
+
+            let result = Math.acos(x);
+
+            return degreeMode ?
+            result*180/Math.PI :
+            result;
+
+        }
+
+        function atan(x){
+
+            let result = Math.atan(x);
+
+            return degreeMode ?
+            result*180/Math.PI :
+            result;
+
+        }
+
+        document.getElementById("display").value =
+        Function(
+            '"use strict"; return (' +
+            expression +
+            ')'
         )();
 
     }
 
     catch{
 
-        display.value = "Error";
+        document.getElementById("display").value =
+        "Error";
 
     }
 
@@ -288,4 +558,5 @@ function calculate(){
 
 
 </body>
-  </html>
+
+    </html>
