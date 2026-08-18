@@ -563,22 +563,366 @@ Created by PS • Learn • Code • Build 🚀
 
 </footer>
 
+
 <script>
 
-function checkAnswer(button, answer){
+const questions = [
 
-    const result = document.getElementById("result");
+{
+question: "What does CPU stand for?",
+options: [
+"Central Programming Unit",
+"Central Processing Unit",
+"Computer Processing Utility",
+"Control Processing Unit"
+],
+answer: 1
+},
 
-    if(answer === "correct"){
-        result.innerHTML = "✅ Correct Answer! Great job 🎉";
-        result.style.color = "#39ff88";
-    } 
-    else {
-        result.innerHTML = "❌ Wrong Answer! Try again.";
-        result.style.color = "#ff5c5c";
+{
+question: "Which language is known as the mother of many programming languages?",
+options: [
+"C",
+"HTML",
+"CSS",
+"SQL"
+],
+answer: 0
+},
+
+{
+question: "Which device is used to input text into a computer?",
+options: [
+"Monitor",
+"Printer",
+"Keyboard",
+"Speaker"
+],
+answer: 2
+},
+
+{
+question: "What is the full form of RAM?",
+options: [
+"Read Access Memory",
+"Random Access Memory",
+"Run Access Memory",
+"Rapid Access Machine"
+],
+answer: 1
+},
+
+{
+question: "Which number system uses only 0 and 1?",
+options: [
+"Decimal",
+"Octal",
+"Binary",
+"Hexadecimal"
+],
+answer: 2
+},
+
+{
+question: "What is the brain of a computer?",
+options: [
+"RAM",
+"Hard Disk",
+"CPU",
+"Keyboard"
+],
+answer: 2
+},
+
+{
+question: "Which HTML tag is used to create a paragraph?",
+options: [
+"<p>",
+"<h1>",
+"<br>",
+"<div>"
+],
+answer: 0
+},
+
+{
+question: "Which CSS property is used to change text color?",
+options: [
+"font-size",
+"background",
+"color",
+"text-style"
+],
+answer: 2
+},
+
+{
+question: "Which symbol is used for comments in C?",
+options: [
+"//",
+"##",
+"<!-- -->",
+"**"
+],
+answer: 0
+},
+
+{
+question: "Which operator is used for AND in C?",
+options: [
+"||",
+"&&",
+"!",
+"&"
+],
+answer: 1
+},
+
+{
+question: "What is 10 in binary?",
+options: [
+"1010",
+"1001",
+"1110",
+"1100"
+],
+answer: 0
+},
+
+{
+question: "Which data type is used to store a character in C?",
+options: [
+"int",
+"float",
+"char",
+"double"
+],
+answer: 2
+},
+
+{
+question: "Which loop executes its body at least once?",
+options: [
+"for",
+"while",
+"do-while",
+"if"
+],
+answer: 2
+},
+
+{
+question: "What does HTML stand for?",
+options: [
+"Hyper Text Markup Language",
+"High Text Machine Language",
+"Hyper Transfer Markup Language",
+"Home Tool Markup Language"
+],
+answer: 0
+},
+
+{
+question: "Which one is an operating system?",
+options: [
+"Python",
+"Windows",
+"HTML",
+"Oracle"
+],
+answer: 1
+},
+
+{
+question: "Which memory is volatile?",
+options: [
+"ROM",
+"Hard Disk",
+"RAM",
+"SSD"
+],
+answer: 2
+},
+
+{
+question: "Which gate gives output 1 only when both inputs are 1?",
+options: [
+"OR",
+"NOT",
+"AND",
+"XOR"
+],
+answer: 2
+},
+
+{
+question: "What is the full form of URL?",
+options: [
+"Uniform Resource Locator",
+"Universal Record Link",
+"Uniform Reference Link",
+"Universal Resource Location"
+],
+answer: 0
+},
+
+{
+question: "Which keyword is used to return a value from a function in C?",
+options: [
+"break",
+"return",
+"continue",
+"exit"
+],
+answer: 1
+},
+
+{
+question: "Which data structure follows FIFO?",
+options: [
+"Stack",
+"Queue",
+"Tree",
+"Graph"
+],
+answer: 1
+}
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion(){
+
+    const q = questions[currentQuestion];
+
+    document.getElementById("question").innerHTML =
+        "Q" + (currentQuestion + 1) + ". " + q.question;
+
+    const buttons = document.querySelectorAll(".options button");
+
+    buttons.forEach((button, index) => {
+
+        button.innerHTML = q.options[index];
+
+        button.disabled = false;
+
+        button.style.background = "#132a43";
+
+        button.onclick = function(){
+
+            checkAnswer(index);
+
+        };
+
+    });
+
+    document.getElementById("result").innerHTML =
+        "Question " + (currentQuestion + 1) +
+        " of " + questions.length;
+
+}
+
+function checkAnswer(selected){
+
+    const q = questions[currentQuestion];
+
+    const buttons = document.querySelectorAll(".options button");
+
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+
+    if(selected === q.answer){
+
+        score++;
+
+        document.getElementById("result").innerHTML =
+            "✅ Correct! 🎉";
+
+        buttons[selected].style.background = "#147a3d";
+
+    }else{
+
+        document.getElementById("result").innerHTML =
+            "❌ Wrong! Correct answer: " +
+            q.options[q.answer];
+
+        buttons[selected].style.background = "#8b2020";
+        buttons[q.answer].style.background = "#147a3d";
+
+    }
+
+    setTimeout(nextQuestion, 1200);
+
+}
+
+function nextQuestion(){
+
+    currentQuestion++;
+
+    if(currentQuestion < questions.length){
+
+        loadQuestion();
+
+    }else{
+
+        showResult();
+
     }
 
 }
+
+function showResult(){
+
+    const card = document.querySelector(".challenge-card");
+
+    card.innerHTML = `
+
+        <h3>🏆 Quiz Completed!</h3>
+
+        <p style="font-size:22px;">
+        Your Score
+        </p>
+
+        <p style="font-size:40px;font-weight:bold;">
+        ${score} / ${questions.length}
+        </p>
+
+        <p>
+        ${
+            score >= 16
+            ? "🔥 Excellent! You are a CSE Champion!"
+            : score >= 10
+            ? "👏 Great job! Keep practicing!"
+            : "💪 Keep learning and try again!"
+        }
+        </p>
+
+        <button
+        onclick="location.reload()"
+        style="
+        margin-top:20px;
+        padding:14px 25px;
+        border:none;
+        border-radius:10px;
+        background:#39a7ff;
+        color:white;
+        font-size:16px;
+        cursor:pointer;
+        ">
+        🔄 Try Again
+        </button>
+
+    `;
+
+}
+
+loadQuestion();
+
+
+
 
 </script>
 
