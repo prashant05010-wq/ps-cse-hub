@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculator | PS CSE HUB</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#e0f2fe,#f8fafc);
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#222;
+    font-weight:bold;
+}
+
+.container{
+    max-width:500px;
+    margin:50px auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+.calculator{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.12);
+}
+
+#display{
+    width:100%;
+    height:60px;
+    font-size:28px;
+    text-align:right;
+    margin-bottom:15px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    padding:0 10px;
+    box-sizing:border-box;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    height:60px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#f1f5f9;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+.equal{
+    grid-column:span 2;
+}
+
+.clear{
+    grid-column:span 2;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="nav">
+
+<div class="logo">
+PS CSE HUB
+</div>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="cse-notes.html">CSE Notes</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<div class="container">
+
+<h1>🧮 Online Calculator</h1>
+
+<p style="text-align:center;">
+Calculate quickly with PS CSE HUB.
+</p>
+
+
+<div class="calculator">
+
+<input type="text" id="display" readonly>
+
+
+<div class="buttons">
+
+<button onclick="clearDisplay()" class="clear">
+C
+</button>
+
+<button onclick="deleteLast()">
+⌫
+</button>
+
+<button onclick="appendValue('/')">
+÷
+</button>
+
+
+<button onclick="appendValue('7')">
+7
+</button>
+
+<button onclick="appendValue('8')">
+8
+</button>
+
+<button onclick="appendValue('9')">
+9
+</button>
+
+<button onclick="appendValue('*')">
+×
+</button>
+
+
+<button onclick="appendValue('4')">
+4
+</button>
+
+<button onclick="appendValue('5')">
+5
+</button>
+
+<button onclick="appendValue('6')">
+6
+</button>
+
+<button onclick="appendValue('-')">
+−
+</button>
+
+
+<button onclick="appendValue('1')">
+1
+</button>
+
+<button onclick="appendValue('2')">
+2
+</button>
+
+<button onclick="appendValue('3')">
+3
+</button>
+
+<button onclick="appendValue('+')">
++
+</button>
+
+
+<button onclick="appendValue('0')">
+0
+</button>
+
+<button onclick="appendValue('.')">
+.
+</button>
+
+<button onclick="calculate()" class="equal">
+=
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 <strong>PS CSE HUB</strong>
+</p>
+
+<p>
+Created by PS • Learn • Code • Build 🚀
+</p>
+
+</footer>
+
+
+<script>
+
+function appendValue(value){
+
+    document.getElementById("display").value += value;
+
+}
+
+
+function clearDisplay(){
+
+    document.getElementById("display").value = "";
+
+}
+
+
+function deleteLast(){
+
+    let display = document.getElementById("display");
+
+    display.value = display.value.slice(0,-1);
+
+}
+
+
+function calculate(){
+
+    let display = document.getElementById("display");
+
+    try{
+
+        display.value = Function(
+            '"use strict"; return (' + display.value + ')'
+        )();
+
+    }
+
+    catch{
+
+        display.value = "Error";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+  </html>
