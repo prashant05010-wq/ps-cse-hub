@@ -492,63 +492,82 @@ function calculate(){
         expression =
         expression.replaceAll("ln(","Math.log(");
        if (degreeMode) {
+
     expression = expression.replace(
         /sin\(([^()]*)\)/g,
         function(match, value) {
             return "Math.sin((" + value + ")*Math.PI/180)";
         }
     );
+
+    expression = expression.replace(
+        /cos\(([^()]*)\)/g,
+        function(match, value) {
+            return "Math.cos((" + value + ")*Math.PI/180)";
+        }
+    );
+
+    expression = expression.replace(
+        /tan\(([^()]*)\)/g,
+        function(match, value) {
+            return "Math.tan((" + value + ")*Math.PI/180)";
+        }
+    );
+
+    expression = expression.replace(
+        /asin\(([^()]*)\)/g,
+        function(match, value) {
+            return "(180/Math.PI)*Math.asin(" + value + ")";
+        }
+    );
+
+    expression = expression.replace(
+        /acos\(([^()]*)\)/g,
+        function(match, value) {
+            return "(180/Math.PI)*Math.acos(" + value + ")";
+        }
+    );
+
+    expression = expression.replace(
+        /atan\(([^()]*)\)/g,
+        function(match, value) {
+            return "(180/Math.PI)*Math.atan(" + value + ")";
+        }
+    );
+
 } else {
-    expression = expression.replaceAll("sin(", "Math.sin(");
-}
- 
-        
-    
 
+    expression = expression.replaceAll(
+        "sin(",
+        "Math.sin("
+    );
 
-        expression =
-        expression.replaceAll(
-            "cos(",
-            degreeMode ?
-            "Math.cos(Math.PI/180*(" :
-            "Math.cos("
-        );
+    expression = expression.replaceAll(
+        "cos(",
+        "Math.cos("
+    );
 
+    expression = expression.replaceAll(
+        "tan(",
+        "Math.tan("
+    );
 
-        expression =
-        expression.replaceAll(
-            "tan(",
-            degreeMode ?
-            "Math.tan(Math.PI/180*(" :
-            "Math.tan("
-        );
+    expression = expression.replaceAll(
+        "asin(",
+        "Math.asin("
+    );
 
+    expression = expression.replaceAll(
+        "acos(",
+        "Math.acos("
+    );
 
-        expression =
-        expression.replaceAll(
-            "asin(",
-            degreeMode ?
-            "(180/Math.PI)*Math.asin(" :
-            "Math.asin("
-        );
+    expression = expression.replaceAll(
+        "atan(",
+        "Math.atan("
+    );
 
-
-        expression =
-        expression.replaceAll(
-            "acos(",
-            degreeMode ?
-            "(180/Math.PI)*Math.acos(" :
-            "Math.acos("
-        );
-
-
-        expression =
-        expression.replaceAll(
-            "atan(",
-            degreeMode ?
-            "(180/Math.PI)*Math.atan(" :
-            "Math.atan("
-        );
+    }
 
 
         let result =
