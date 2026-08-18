@@ -563,6 +563,26 @@ Created by PS • Learn • Code • Build 🚀
 
 </footer>
 
+<script>
 
+function checkAnswer(button, answer){
+
+    const result = document.getElementById("result");
+
+    if(answer === "correct"){
+        result.innerHTML = "✅ Correct Answer! Great job 🎉";
+        result.style.color = "#39ff88";
+    } 
+    else {
+        result.innerHTML = "❌ Wrong Answer! Try again.";
+        result.style.color = "#ff5c5c";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
 </body>
     </html>
