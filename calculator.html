@@ -407,34 +407,56 @@ function calculate(){
         IMPORTANT:
         Inverse functions are replaced FIRST.
         */
+if(degreeMode){
+
+    expression = expression.replace(
+        /asin\(([^()]*)\)/g,
+        "INVASIN($1)"
+    );
+
+    expression = expression.replace(
+        /acos\(([^()]*)\)/g,
+        "INVACOS($1)"
+    );
+
+    expression = expression.replace(
+        /atan\(([^()]*)\)/g,
+        "INVATAN($1)"
+    );
 
 
-        if(degreeMode){
+    expression = expression.replace(
+        /sin\(([^()]*)\)/g,
+        "Math.sin(($1)*Math.PI/180)"
+    );
 
-            expression =
-            expression.replace(
-                /asin\(([^()]*)\)/g,
-                "(Math.asin($1)*180/Math.PI)"
-            );
+    expression = expression.replace(
+        /cos\(([^()]*)\)/g,
+        "Math.cos(($1)*Math.PI/180)"
+    );
 
-            expression =
-            expression.replace(
-                /acos\(([^()]*)\)/g,
-                "(Math.acos($1)*180/Math.PI)"
-            );
-
-            expression =
-            expression.replace(
-                /atan\(([^()]*)\)/g,
-                "(Math.atan($1)*180/Math.PI)"
-            );
+    expression = expression.replace(
+        /tan\(([^()]*)\)/g,
+        "Math.tan(($1)*Math.PI/180)"
+    );
 
 
-            expression =
-            expression.replace(
-                /sin\(([^()]*)\)/g,
-                "Math.sin(($1)*Math.PI/180)"
-            );
+    expression = expression.replace(
+        /INVASIN\(([^()]*)\)/g,
+        "(Math.asin($1)*180/Math.PI)"
+    );
+
+    expression = expression.replace(
+        /INVACOS\(([^()]*)\)/g,
+        "(Math.acos($1)*180/Math.PI)"
+    );
+
+    expression = expression.replace(
+        /INVATAN\(([^()]*)\)/g,
+        "(Math.atan($1)*180/Math.PI)"
+    );
+
+    } 
 
             expression =
             expression.replace(
