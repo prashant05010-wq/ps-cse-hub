@@ -65,14 +65,14 @@ h1{
     border-radius:10px;
     margin-bottom:15px;
     padding:10px;
-    font-size:26px;
+    font-size:25px;
     text-align:right;
     background:#f8fafc;
 }
 
 .top{
     display:flex;
-    gap:10px;
+    gap:8px;
     margin-bottom:10px;
 }
 
@@ -92,10 +92,6 @@ button{
     border-radius:8px;
     font-size:16px;
     cursor:pointer;
-}
-
-button:hover{
-    opacity:.8;
 }
 
 .number{
@@ -175,7 +171,6 @@ Scientific Calculator for CSE & Engineering Students
 
 <div class="calculator">
 
-
 <input id="display" type="text" readonly>
 
 
@@ -185,7 +180,7 @@ Scientific Calculator for CSE & Engineering Students
 DEG
 </button>
 
-<button onclick="clearAll()" class="clear">
+<button onclick="clearDisplay()" class="clear">
 AC
 </button>
 
@@ -199,159 +194,76 @@ AC
 <div class="buttons">
 
 
-<button class="function" onclick="addFunction('sin')">
-sin
-</button>
+<button class="function" onclick="func('sin')">sin</button>
 
-<button class="function" onclick="addFunction('cos')">
-cos
-</button>
+<button class="function" onclick="func('cos')">cos</button>
 
-<button class="function" onclick="addFunction('tan')">
-tan
-</button>
+<button class="function" onclick="func('tan')">tan</button>
 
-<button class="function" onclick="addFunction('log')">
-log
-</button>
+<button class="function" onclick="func('asin')">sin⁻¹</button>
 
-<button class="function" onclick="addFunction('ln')">
-ln
-</button>
+<button class="function" onclick="func('acos')">cos⁻¹</button>
 
 
-<button class="function" onclick="addFunction('asin')">
-sin⁻¹
-</button>
+<button class="function" onclick="func('atan')">tan⁻¹</button>
 
-<button class="function" onclick="addFunction('acos')">
-cos⁻¹
-</button>
+<button class="function" onclick="func('sqrt')">√</button>
 
-<button class="function" onclick="addFunction('atan')">
-tan⁻¹
-</button>
+<button class="function" onclick="func('log')">log</button>
 
-<button class="function" onclick="addFunction('sqrt')">
-√
-</button>
+<button class="function" onclick="func('ln')">ln</button>
 
-<button class="function" onclick="square()">
-x²
-</button>
+<button class="function" onclick="square()">x²</button>
 
 
-<button class="function" onclick="add('^')">
-xʸ
-</button>
+<button class="function" onclick="add('^')">xʸ</button>
 
-<button class="function" onclick="add('π')">
-π
-</button>
+<button class="function" onclick="add('Math.PI')">π</button>
 
-<button class="function" onclick="add('e')">
-e
-</button>
+<button class="function" onclick="add('Math.E')">e</button>
 
-<button class="function" onclick="add('10^')">
-10ˣ
-</button>
+<button class="function" onclick="add('(')">(</button>
 
-<button class="function" onclick="factorial()">
-x!
-</button>
+<button class="function" onclick="add(')')">)</button>
 
 
-<button class="function" onclick="add('(')">
-(
-</button>
+<button class="number" onclick="add('7')">7</button>
 
-<button class="function" onclick="add(')')">
-)
-</button>
+<button class="number" onclick="add('8')">8</button>
 
-<button class="function" onclick="add('%')">
-%
-</button>
+<button class="number" onclick="add('9')">9</button>
 
-<button class="operator" onclick="add('/')">
-÷
-</button>
+<button class="operator" onclick="add('/')">÷</button>
 
-<button class="operator" onclick="add('*')">
-×
-</button>
+<button class="operator" onclick="add('*')">×</button>
 
 
-<button class="number" onclick="add('7')">
-7
-</button>
+<button class="number" onclick="add('4')">4</button>
 
-<button class="number" onclick="add('8')">
-8
-</button>
+<button class="number" onclick="add('5')">5</button>
 
-<button class="number" onclick="add('9')">
-9
-</button>
+<button class="number" onclick="add('6')">6</button>
 
-<button class="operator" onclick="add('-')">
-−
-</button>
+<button class="operator" onclick="add('-')">−</button>
 
-<button class="function" onclick="add('00')">
-00
-</button>
+<button class="operator" onclick="add('+')">+</button>
 
 
-<button class="number" onclick="add('4')">
-4
-</button>
+<button class="number" onclick="add('1')">1</button>
 
-<button class="number" onclick="add('5')">
-5
-</button>
+<button class="number" onclick="add('2')">2</button>
 
-<button class="number" onclick="add('6')">
-6
-</button>
+<button class="number" onclick="add('3')">3</button>
 
-<button class="operator" onclick="add('+')">
-+
-</button>
+<button class="number" onclick="add('0')">0</button>
 
-<button class="function" onclick="answer()">
-Ans
-</button>
-
-
-<button class="number" onclick="add('1')">
-1
-</button>
-
-<button class="number" onclick="add('2')">
-2
-</button>
-
-<button class="number" onclick="add('3')">
-3
-</button>
-
-<button class="number" onclick="add('0')">
-0
-</button>
-
-<button class="number" onclick="add('.')">
-.
-</button>
+<button class="number" onclick="add('.')">.</button>
 
 
 <button class="equal"
 style="grid-column:span 5;"
 onclick="calculate()">
-
 =
-
 </button>
 
 
@@ -379,8 +291,8 @@ Created by PS • Learn • Code • Build 🚀
 
 let degreeMode = true;
 
-let lastAnswer = 0;
 
+/* Display */
 
 function display(){
 
@@ -389,6 +301,8 @@ function display(){
 }
 
 
+/* Add text */
+
 function add(value){
 
     display().value += value;
@@ -396,19 +310,25 @@ function add(value){
 }
 
 
-function addFunction(name){
+/* Scientific functions */
+
+function func(name){
 
     display().value += name + "(";
 
 }
 
 
-function clearAll(){
+/* Clear */
+
+function clearDisplay(){
 
     display().value = "";
 
 }
 
+
+/* Backspace */
 
 function backspace(){
 
@@ -417,6 +337,8 @@ function backspace(){
 
 }
 
+
+/* DEG / RAD */
 
 function toggleMode(){
 
@@ -428,6 +350,8 @@ function toggleMode(){
 }
 
 
+/* Square */
+
 function square(){
 
     display().value += "^2";
@@ -435,122 +359,141 @@ function square(){
 }
 
 
-function factorial(){
-
-    let value =
-    Number(display().value);
-
-    if(value < 0 || !Number.isInteger(value)){
-
-        display().value = "Error";
-
-        return;
-
-    }
-
-    let result = 1;
-
-    for(let i=1;i<=value;i++){
-
-        result *= i;
-
-    }
-
-    display().value = result;
-
-}
-
-
-function answer(){
-
-    display().value += lastAnswer;
-
-}
-
+/* Calculate */
 
 function calculate(){
 
-    let expression = display().value;
+    let expression =
+    display().value;
+
 
     try{
 
-        expression =
-        expression.replaceAll("π","Math.PI");
 
-        expression =
-        expression.replaceAll("e","Math.E");
+        /* Power */
 
         expression =
         expression.replaceAll("^","**");
 
-        expression =
-        expression.replaceAll("sqrt(","Math.sqrt(");
+
+        /* Square root */
 
         expression =
-        expression.replaceAll("log(","Math.log10(");
+        expression.replaceAll(
+            "sqrt(",
+            "Math.sqrt("
+        );
+
+
+        /* Log */
 
         expression =
-        expression.replaceAll("ln(","Math.log(");
-      if (degreeMode) {
+        expression.replaceAll(
+            "log(",
+            "Math.log10("
+        );
 
-    // Inverse functions FIRST
-    expression = expression.replace(
-        /asin\(([^()]*)\)/g,
-        function(match, value) {
-            return "(Math.asin(" + value + ")*180/Math.PI)";
+
+        /* Natural log */
+
+        expression =
+        expression.replaceAll(
+            "ln(",
+            "Math.log("
+        );
+
+
+        /*
+        IMPORTANT:
+        Inverse functions are replaced FIRST.
+        */
+
+
+        if(degreeMode){
+
+            expression =
+            expression.replace(
+                /asin\(([^()]*)\)/g,
+                "(Math.asin($1)*180/Math.PI)"
+            );
+
+            expression =
+            expression.replace(
+                /acos\(([^()]*)\)/g,
+                "(Math.acos($1)*180/Math.PI)"
+            );
+
+            expression =
+            expression.replace(
+                /atan\(([^()]*)\)/g,
+                "(Math.atan($1)*180/Math.PI)"
+            );
+
+
+            expression =
+            expression.replace(
+                /sin\(([^()]*)\)/g,
+                "Math.sin(($1)*Math.PI/180)"
+            );
+
+            expression =
+            expression.replace(
+                /cos\(([^()]*)\)/g,
+                "Math.cos(($1)*Math.PI/180)"
+            );
+
+            expression =
+            expression.replace(
+                /tan\(([^()]*)\)/g,
+                "Math.tan(($1)*Math.PI/180)"
+            );
+
         }
-    );
 
-    expression = expression.replace(
-        /acos\(([^()]*)\)/g,
-        function(match, value) {
-            return "(Math.acos(" + value + ")*180/Math.PI)";
+        else{
+
+            expression =
+            expression.replaceAll(
+                "asin(",
+                "Math.asin("
+            );
+
+            expression =
+            expression.replaceAll(
+                "acos(",
+                "Math.acos("
+            );
+
+            expression =
+            expression.replaceAll(
+                "atan(",
+                "Math.atan("
+            );
+
+            expression =
+            expression.replaceAll(
+                "sin(",
+                "Math.sin("
+            );
+
+            expression =
+            expression.replaceAll(
+                "cos(",
+                "Math.cos("
+            );
+
+            expression =
+            expression.replaceAll(
+                "tan(",
+                "Math.tan("
+            );
+
         }
-    );
-
-    expression = expression.replace(
-        /atan\(([^()]*)\)/g,
-        function(match, value) {
-            return "(Math.atan(" + value + ")*180/Math.PI)";
-        }
-    );
-
-    // Normal functions AFTER inverse functions
-    expression = expression.replace(
-        /sin\(([^()]*)\)/g,
-        function(match, value) {
-            return "Math.sin((" + value + ")*Math.PI/180)";
-        }
-    );
-
-    expression = expression.replace(
-        /cos\(([^()]*)\)/g,
-        function(match, value) {
-            return "Math.cos((" + value + ")*Math.PI/180)";
-        }
-    );
-
-    expression = expression.replace(
-        /tan\(([^()]*)\)/g,
-        function(match, value) {
-            return "Math.tan((" + value + ")*Math.PI/180)";
-        }
-    );
-
-} else {
-
-    expression = expression.replaceAll("asin(", "Math.asin(");
-    expression = expression.replaceAll("acos(", "Math.acos(");
-    expression = expression.replaceAll("atan(", "Math.atan(");
-
-    expression = expression.replaceAll("sin(", "Math.sin(");
-    expression = expression.replaceAll("cos(", "Math.cos(");
-    expression = expression.replaceAll("tan(", "Math.tan(");
-
-    } 
 
 
-        let result =
+        /* Calculate */
+
+        let answer =
         Function(
             '"use strict"; return (' +
             expression +
@@ -558,22 +501,27 @@ function calculate(){
         )();
 
 
-        if(!Number.isFinite(result)){
+        /* Remove floating point noise */
 
-            throw new Error();
+        if(
+            Math.abs(answer) < 0.000000000001
+        ){
+
+            answer = 0;
 
         }
 
 
-        lastAnswer = result;
+        display().value =
+        Number(answer.toFixed(10));
 
-        display().value = result;
 
     }
 
     catch(error){
 
-        display().value = "Error";
+        display().value =
+        "Error";
 
     }
 
