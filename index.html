@@ -197,7 +197,55 @@ footer strong{
     }
 
 }
+/* DAILY CSE CHALLENGE */
 
+.challenge{
+    padding:60px 20px;
+}
+
+.challenge-card{
+    max-width:700px;
+    margin:30px auto 0;
+    background:#0d1b2e;
+    border:1px solid #24415f;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.challenge-card h3{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.options{
+    display:grid;
+    gap:12px;
+}
+
+.options button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#132a43;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.options button:hover{
+    background:#1d4f7a;
+    transform:translateY(-2px);
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+  }
 </style>
 
 </head>
@@ -390,7 +438,47 @@ Open Calculator
 
 </section>
 
+<!-- DAILY CSE CHALLENGE -->
+<section class="challenge">
 
+<div class="container">
+
+<div class="title">
+<h2>🧠 Daily CSE Challenge</h2>
+<p>Test your CSE knowledge & improve every day 🚀</p>
+</div>
+
+<div class="challenge-card">
+
+<h3 id="question">What does CPU stand for?</h3>
+
+<div class="options">
+
+<button onclick="checkAnswer(this, 'wrong')">
+Central Programming Unit
+</button>
+
+<button onclick="checkAnswer(this, 'correct')">
+Central Processing Unit
+</button>
+
+<button onclick="checkAnswer(this, 'wrong')">
+Computer Processing Utility
+</button>
+
+<button onclick="checkAnswer(this, 'wrong')">
+Control Processing Unit
+</button>
+
+</div>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+</section>
 <section class="about">
 
 <div class="container">
