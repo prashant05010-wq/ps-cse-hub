@@ -491,8 +491,31 @@ function calculate(){
 
         expression =
         expression.replaceAll("ln(","Math.log(");
-       if (degreeMode) {
+      if (degreeMode) {
 
+    // Inverse functions FIRST
+    expression = expression.replace(
+        /asin\(([^()]*)\)/g,
+        function(match, value) {
+            return "(Math.asin(" + value + ")*180/Math.PI)";
+        }
+    );
+
+    expression = expression.replace(
+        /acos\(([^()]*)\)/g,
+        function(match, value) {
+            return "(Math.acos(" + value + ")*180/Math.PI)";
+        }
+    );
+
+    expression = expression.replace(
+        /atan\(([^()]*)\)/g,
+        function(match, value) {
+            return "(Math.atan(" + value + ")*180/Math.PI)";
+        }
+    );
+
+    // Normal functions AFTER inverse functions
     expression = expression.replace(
         /sin\(([^()]*)\)/g,
         function(match, value) {
@@ -514,60 +537,17 @@ function calculate(){
         }
     );
 
-    expression = expression.replace(
-        /asin\(([^()]*)\)/g,
-        function(match, value) {
-            return "(180/Math.PI)*Math.asin(" + value + ")";
-        }
-    );
-
-    expression = expression.replace(
-        /acos\(([^()]*)\)/g,
-        function(match, value) {
-            return "(180/Math.PI)*Math.acos(" + value + ")";
-        }
-    );
-
-    expression = expression.replace(
-        /atan\(([^()]*)\)/g,
-        function(match, value) {
-            return "(180/Math.PI)*Math.atan(" + value + ")";
-        }
-    );
-
 } else {
 
-    expression = expression.replaceAll(
-        "sin(",
-        "Math.sin("
-    );
+    expression = expression.replaceAll("asin(", "Math.asin(");
+    expression = expression.replaceAll("acos(", "Math.acos(");
+    expression = expression.replaceAll("atan(", "Math.atan(");
 
-    expression = expression.replaceAll(
-        "cos(",
-        "Math.cos("
-    );
+    expression = expression.replaceAll("sin(", "Math.sin(");
+    expression = expression.replaceAll("cos(", "Math.cos(");
+    expression = expression.replaceAll("tan(", "Math.tan(");
 
-    expression = expression.replaceAll(
-        "tan(",
-        "Math.tan("
-    );
-
-    expression = expression.replaceAll(
-        "asin(",
-        "Math.asin("
-    );
-
-    expression = expression.replaceAll(
-        "acos(",
-        "Math.acos("
-    );
-
-    expression = expression.replaceAll(
-        "atan(",
-        "Math.atan("
-    );
-
-    }
+    } 
 
 
         let result =
