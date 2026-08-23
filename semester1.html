@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semester 1 Syllabus | PS CSE HUB</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eaf6ff, #f8fbff);
+    color: #222;
+}
+
+.nav {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #168cff;
+}
+
+.home-btn {
+    text-decoration: none;
+    background: #168cff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 35px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #555;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 25px 0 60px;
+}
+
+.subject-card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+}
+
+.subject-card h2 {
+    color: #168cff;
+    margin-bottom: 15px;
+}
+
+.subject-card ul {
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+.subject-card li {
+    margin-bottom: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    color: #666;
+}
+
+@media (max-width: 700px) {
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="nav">
+
+    <div class="logo">
+        PS CSE HUB
+    </div>
+
+    <a href="index.html" class="home-btn">
+        ← Home
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>📚 Semester 1 Syllabus</h1>
+
+        <p>
+            B.Tech Computer Science & Engineering
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="subject-grid">
+
+
+            <!-- MATHEMATICS -->
+
+            <div class="subject-card">
+
+                <h2>📐 Engineering Mathematics-I</h2>
+
+                <ul>
+                    <li>Differential Calculus</li>
+                    <li>Integral Calculus</li>
+                    <li>Partial Differentiation</li>
+                    <li>Multiple Integrals</li>
+                    <li>Sequences and Series</li>
+                    <li>Matrices and Determinants</li>
+                </ul>
+
+            </div>
+
+
+            <!-- PHYSICS -->
+
+            <div class="subject-card">
+
+                <h2>⚛️ Engineering Physics</h2>
+
+                <ul>
+                    <li>Quantum Mechanics</li>
+                    <li>Wave Optics</li>
+                    <li>Lasers</li>
+                    <li>Fiber Optics</li>
+                    <li>Semiconductors</li>
+                    <li>Electromagnetic Theory</li>
+                </ul>
+
+            </div>
+
+
+            <!-- PROGRAMMING -->
+
+            <div class="subject-card">
+
+                <h2>💻 Programming for Problem Solving</h2>
+
+                <ul>
+                    <li>Introduction to C Programming</li>
+                    <li>Variables and Data Types</li>
+                    <li>Operators and Expressions</li>
+                    <li>Conditional Statements</li>
+                    <li>Loops</li>
+                    <li>Functions</li>
+                    <li>Arrays</li>
+                    <li>Pointers</li>
+                    <li>Structures</li>
+                </ul>
+
+            </div>
+
+
+            <!-- ELECTRICAL -->
+
+            <div class="subject-card">
+
+                <h2>⚡ Basic Electrical Engineering</h2>
+
+                <ul>
+                    <li>DC Circuits</li>
+                    <li>AC Circuits</li>
+                    <li>Network Theorems</li>
+                    <li>Transformers</li>
+                    <li>Electrical Machines</li>
+                    <li>Power Systems</li>
+                </ul>
+
+            </div>
+
+
+            <!-- ENVIRONMENT -->
+
+            <div class="subject-card">
+
+                <h2>🌱 Environment & Ecology</h2>
+
+                <ul>
+                    <li>Ecosystem</li>
+                    <li>Natural Resources</li>
+                    <li>Biodiversity</li>
+                    <li>Environmental Pollution</li>
+                    <li>Climate Change</li>
+                    <li>Sustainable Development</li>
+                </ul>
+
+            </div>
+
+
+            <!-- ENGINEERING GRAPHICS -->
+
+            <div class="subject-card">
+
+                <h2>📏 Engineering Graphics</h2>
+
+                <ul>
+                    <li>Engineering Drawing</li>
+                    <li>Orthographic Projection</li>
+                    <li>Isometric Projection</li>
+                    <li>Projection of Points</li>
+                    <li>Projection of Lines</li>
+                    <li>Section of Solids</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 PS CSE HUB | CSE Notes, Coding & Projects
+    </p>
+
+</footer>
+
+</body>
+</html>
