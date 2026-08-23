@@ -266,6 +266,90 @@ footer strong{
     border-radius:20px;
     transition:width 0.4s ease;
   }
+  /* ============================= */
+/* SEMESTER-WISE SYLLABUS */
+/* ============================= */
+
+.semester-section {
+    padding: 70px 20px;
+}
+
+.semester-section .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.semester-section .title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.semester-section .title p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.semester-card {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.semester-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.semester-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.semester-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.semester-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.semester-btn:hover {
+    transform: scale(1.05);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .semester-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-section .title h2 {
+        font-size: 26px;
+    }
+}
 </style>
 
 </head>
