@@ -350,6 +350,140 @@ footer strong{
         font-size: 26px;
     }
 }
+  /* =========================
+   SEMESTER SYLLABUS
+========================= */
+
+.semester-section {
+    padding: 70px 20px;
+}
+
+.semester-grid {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.semester-card {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(57,167,255,0.20);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.semester-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.semester-card > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.semester-card > summary::-webkit-details-marker {
+    display: none;
+}
+
+.sem-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #39a7ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.semester-card summary strong {
+    display: block;
+    font-size: 18px;
+    color: #222;
+}
+
+.semester-card summary small {
+    display: block;
+    margin-top: 3px;
+    color: #777;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 25px;
+    color: #39a7ff;
+    transition: 0.3s;
+}
+
+.semester-card[open] .arrow {
+    transform: rotate(45deg);
+}
+
+.semester-content {
+    padding: 0 18px 20px;
+}
+
+.subject {
+    margin-top: 10px;
+    border-radius: 12px;
+    background: #f7fbff;
+    border: 1px solid #e4f2ff;
+}
+
+.subject summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 600;
+    color: #222;
+    list-style: none;
+}
+
+.subject summary::-webkit-details-marker {
+    display: none;
+}
+
+.topics {
+    padding: 0 18px 12px;
+}
+
+.topics p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.coming {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-card > summary {
+        padding: 16px;
+    }
+
+    .semester-section {
+        padding: 50px 15px;
+    }
+}
 </style>
 
 </head>
