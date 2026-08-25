@@ -1491,6 +1491,25 @@ function showResult(){
 }
 
 loadQuestion();
+  function toggleSemester(id) {
+
+    const syllabus = document.getElementById(id);
+
+    if (syllabus) {
+        syllabus.classList.toggle("active");
+    }
+
+}
+
+function toggleSubject(id) {
+
+    const units = document.getElementById(id);
+
+    if (units) {
+        units.classList.toggle("active");
+    }
+
+}
 
 
 
