@@ -350,139 +350,133 @@ footer strong{
         font-size: 26px;
     }
 }
-  /* =========================
-   SEMESTER SYLLABUS
+/* =========================
+   SEMESTER WISE SYLLABUS
 ========================= */
 
-.semester-section {
-    padding: 70px 20px;
+.semester-section{
+    background:#07111f;
 }
 
-.semester-grid {
-    max-width: 1000px;
-    margin: 35px auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+.semester-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
-.semester-card {
-    background: rgba(255,255,255,0.75);
-    border: 1px solid rgba(57,167,255,0.20);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+.semester-card{
+    background:#0c1b2d;
+    border:1px solid #24415f;
+    border-radius:16px;
+    overflow:hidden;
+    transition:0.3s;
 }
 
-.semester-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+.semester-card:hover{
+    border-color:#1688ff;
+    box-shadow:0 0 18px rgba(22,136,255,0.15);
 }
 
-.semester-card > summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.semester-header{
+    padding:25px;
+    text-align:center;
 }
 
-.semester-card > summary::-webkit-details-marker {
-    display: none;
+.semester-number{
+    width:55px;
+    height:55px;
+    margin:0 auto 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#1688ff;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.sem-icon {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #39a7ff;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+.semester-header h3{
+    color:#4db2ff;
+    margin:5px 0;
 }
 
-.semester-card summary strong {
-    display: block;
-    font-size: 18px;
-    color: #222;
+.semester-header p{
+    color:#9cafc1;
+    margin:5px 0 15px;
 }
 
-.semester-card summary small {
-    display: block;
-    margin-top: 3px;
-    color: #777;
+.view-btn{
+    padding:11px 22px;
+    background:#1688ff;
+    color:white;
+    border:0;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.arrow {
-    margin-left: auto;
-    font-size: 25px;
-    color: #39a7ff;
-    transition: 0.3s;
+.view-btn:hover{
+    background:#39a7ff;
 }
 
-.semester-card[open] .arrow {
-    transform: rotate(45deg);
+.syllabus{
+    display:none;
+    padding:0 20px 20px;
+    border-top:1px solid #24415f;
 }
 
-.semester-content {
-    padding: 0 18px 20px;
+.syllabus.active{
+    display:block;
 }
 
-.subject {
-    margin-top: 10px;
-    border-radius: 12px;
-    background: #f7fbff;
-    border: 1px solid #e4f2ff;
+.subject-box{
+    background:#07111f;
+    border:1px solid #24415f;
+    border-radius:12px;
+    margin-top:12px;
+    overflow:hidden;
 }
 
-.subject summary {
-    cursor: pointer;
-    padding: 14px 16px;
-    font-weight: 600;
-    color: #222;
-    list-style: none;
+.subject-title{
+    padding:14px;
+    color:#4db2ff;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.subject summary::-webkit-details-marker {
-    display: none;
+.subject-title:hover{
+    background:#0a1727;
 }
 
-.topics {
-    padding: 0 18px 12px;
+.units{
+    display:none;
+    padding:0 15px 12px;
 }
 
-.topics p {
-    margin: 8px 0;
-    color: #555;
-    font-size: 14px;
+.units.active{
+    display:block;
 }
 
-.coming {
-    padding: 20px;
-    text-align: center;
-    color: #777;
+.units p{
+    color:#c3d1df;
+    margin:8px 0;
+    padding-left:8px;
+    border-left:2px solid #1688ff;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
+.coming{
+    color:#9cafc1;
+    text-align:center;
+    padding:15px;
+}
 
-    .semester-grid {
-        grid-template-columns: 1fr;
+@media(max-width:600px){
+
+    .semester-grid{
+        grid-template-columns:1fr;
     }
 
-    .semester-card > summary {
-        padding: 16px;
-    }
-
-    .semester-section {
-        padding: 50px 15px;
-    }
 }
 </style>
 
