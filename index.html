@@ -2308,27 +2308,17 @@ document.getElementById("progress-bar").style.width =
         " of " + questions.length;
 
 }
-
-function checkAnswer(selected){
+  function checkAnswer(selected){
 
     const q = questions[currentQuestion];
-  if(selected === q.answer){
 
-    score++;
-    xp += 10;
-    localStorage.setItem("psCseXP", xp);
+    // Prevent answering the same question again
+    if(answeredQuestions[currentQuestion]){
+        return;
+    }
 
-    document.getElementById("xp-display").innerHTML =
-        "⭐ XP: " + xp;
-
-    updateLevel();
-
-    document.getElementById("result").innerHTML =
-        "✅ Correct! 🎉";
-
-    buttons[selected].style.background = "#147a3d";
-
-}
+    // Mark question as answered
+    answeredQuestions[currentQuestion] = true;
 
     const buttons = document.querySelectorAll(".options button");
 
@@ -2336,13 +2326,19 @@ function checkAnswer(selected){
         button.disabled = true;
     });
 
+    clearInterval(timerInterval);
+
     if(selected === q.answer){
 
         score++;
-      xp += 10;
-localStorage.setItem("psCseXP", xp);
-      document.getElementById("xp-display").innerHTML =
-    "⭐ XP: " + xp;
+        xp += 10;
+
+        localStorage.setItem("psCseXP", xp);
+
+        document.getElementById("xp-display").innerHTML =
+        "⭐ XP: " + xp;
+
+        updateLevel();
 
         document.getElementById("result").innerHTML =
             "✅ Correct! 🎉";
@@ -2361,6 +2357,9 @@ localStorage.setItem("psCseXP", xp);
     }
 
     setTimeout(nextQuestion, 1200);
+
+}
+
 
 }
 
