@@ -2066,6 +2066,8 @@ function checkAnswer(selected){
         score++;
       xp += 10;
 localStorage.setItem("psCseXP", xp);
+      document.getElementById("xp-display").innerHTML =
+    "⭐ XP: " + xp;
 
         document.getElementById("result").innerHTML =
             "✅ Correct! 🎉";
