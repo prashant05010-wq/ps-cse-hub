@@ -2221,6 +2221,7 @@ answer: 0
 let currentQuestion = 0;
 let score = 0;
   let timeLeft = 15;
+  let answeredQuestions = [];
   let xp = Number(localStorage.getItem("psCseXP")) || 0;
   document.getElementById("xp-display").innerHTML =
     "⭐ XP: " + xp;
