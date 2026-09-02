@@ -1999,6 +1999,22 @@ let score = 0;
   let xp = Number(localStorage.getItem("psCseXP")) || 0;
   document.getElementById("xp-display").innerHTML =
     "⭐ XP: " + xp;
+  function updateLevel(){
+    let level = "🌱 Beginner";
+
+    if(xp >= 200){
+        level = "🏆 CSE Champion";
+    }else if(xp >= 100){
+        level = "🔥 Pro Coder";
+    }else if(xp >= 50){
+        level = "💻 Coder";
+    }
+
+    document.getElementById("level-display").innerHTML =
+        "🌟 Level: " + level;
+}
+
+updateLevel();
 let timerInterval;
   function startTimer(){
 
