@@ -2063,6 +2063,8 @@ function checkAnswer(selected){
     if(selected === q.answer){
 
         score++;
+      xp += 10;
+localStorage.setItem("psCseXP", xp);
 
         document.getElementById("result").innerHTML =
             "✅ Correct! 🎉";
