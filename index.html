@@ -2240,8 +2240,11 @@ let timerInterval;
   function startTimer(){
 
     clearInterval(timerInterval);
-
+if(currentQuestion < 20){
     timeLeft = 15;
+}else{
+    timeLeft = 30;
+}
 
     document.getElementById("timer").innerHTML =
         "⏱️ " + timeLeft + "s";
