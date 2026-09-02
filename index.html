@@ -2312,6 +2312,23 @@ document.getElementById("progress-bar").style.width =
 function checkAnswer(selected){
 
     const q = questions[currentQuestion];
+  if(selected === q.answer){
+
+    score++;
+    xp += 10;
+    localStorage.setItem("psCseXP", xp);
+
+    document.getElementById("xp-display").innerHTML =
+        "⭐ XP: " + xp;
+
+    updateLevel();
+
+    document.getElementById("result").innerHTML =
+        "✅ Correct! 🎉";
+
+    buttons[selected].style.background = "#147a3d";
+
+}
 
     const buttons = document.querySelectorAll(".options button");
 
