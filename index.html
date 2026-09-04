@@ -2495,6 +2495,70 @@ function toggleSubject(id) {
 
 
 </script>
+  <script>
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+const searchData = [
+  {
+    title: "Computer Fundamentals",
+    description: "CPU, memory, hardware, software and number systems.",
+    link: "computer-fundamentals.html"
+  },
+  {
+    title: "C Programming",
+    description: "Variables, data types, operators, loops and functions.",
+    link: "programming-notes.html"
+  },
+  {
+    title: "Engineering Mathematics",
+    description: "Matrices, calculus, integration and differential equations.",
+    link: "mathematics-notes.html"
+  },
+  {
+    title: "Digital Electronics",
+    description: "Number systems, logic gates and Boolean algebra.",
+    link: "digital-electronics.html"
+  },
+  {
+    title: "Environment & Sustainability",
+    description: "Environment, pollution, biodiversity and sustainability.",
+    link: "environment-notes.html"
+  },
+  {
+    title: "Coding & Programming",
+    description: "Learn C programming and practice coding concepts.",
+    link: "c-programming.html"
+  }
+];
+
+searchInput.addEventListener("input", function () {
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (query === "") {
+    searchResults.innerHTML = "";
+    return;
+  }
+
+  const results = searchData.filter(item =>
+    item.title.toLowerCase().includes(query) ||
+    item.description.toLowerCase().includes(query)
+  );
+
+  if (results.length === 0) {
+    searchResults.innerHTML = "<p>No notes found.</p>";
+    return;
+  }
+
+  searchResults.innerHTML = results.map(item => `
+    <div class="search-result">
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+      <a href="${item.link}" class="btn">View Notes</a>
+    </div>
+  `).join("");
+});
+</script>
 
 </body>
 </html>
