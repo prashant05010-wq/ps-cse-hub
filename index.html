@@ -521,31 +521,44 @@ footer strong{
     }
 
 }
-  /* Search Bar */
+ /* Top Search Bar */
 .search-section {
-  text-align: center;
-  margin: 30px auto;
-  padding: 25px;
-  max-width: 700px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-align: right;
 }
 
 .search-section h2 {
-  margin-bottom: 15px;
+  display: none;
 }
 
 #searchInput {
-  width: 90%;
-  max-width: 600px;
-  padding: 14px 18px;
-  border: 2px solid #ddd;
-  border-radius: 30px;
-  font-size: 16px;
+  width: 220px;
+  padding: 9px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
   outline: none;
+  box-sizing: border-box;
 }
 
 #searchInput:focus {
   border-color: #4f46e5;
 }
+
+#searchResults {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 300px;
+  text-align: left;
+  z-index: 999;
+}
+
 </style>
 
 </head>
