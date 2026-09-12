@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Code Playground | PS CSE HUB</title>
+
+  <meta name="description"
+        content="Practice C programming online with PS CSE HUB Code Playground. Write code, run it, and learn programming easily.">
+
+  <link rel="icon" type="image/png" href="ps-cse-hub-favicon.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #050d18;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #16304a;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #39a7ff;
+    }
+
+    .back {
+      color: white;
+      text-decoration: none;
+      background: #1688ff;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      background: #39a7ff;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #39a7ff;
+    }
+
+    .hero p {
+      color: #b9c7d6;
+      font-size: 16px;
+    }
+
+    .playground {
+      background: #0b1929;
+      border: 1px solid #1b3a57;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .language {
+      background: #07111f;
+      color: white;
+      border: 1px solid #31506d;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .run {
+      background: #1688ff;
+      color: white;
+    }
+
+    .run:hover {
+      background: #39a7ff;
+    }
+
+    .clear {
+      background: #26384b;
+      color: white;
+    }
+
+    .clear:hover {
+      background: #344d65;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 330px;
+      resize: vertical;
+      background: #050d18;
+      color: #e7f3ff;
+      border: 1px solid #31506d;
+      border-radius: 10px;
+      padding: 18px;
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #39a7ff;
+    }
+
+    .output-title {
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #39a7ff;
+      font-size: 18px;
+    }
+
+    #output {
+      background: #050d18;
+      border: 1px solid #31506d;
+      border-radius: 10px;
+      min-height: 100px;
+      padding: 15px;
+      color: #d9f0ff;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px;
+      background: #101f31;
+      border-radius: 10px;
+      color: #b9c7d6;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8295a8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 27px;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      textarea {
+        min-height: 280px;
+      }
+
+      .buttons {
+        width: 100%;
+      }
+
+      button {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PS CSE HUB</div>
+  <a href="index.html" class="back">← Home</a>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>💻 <span>Code Playground</span></h1>
+    <p>Write code • Practice • Learn • Build 🚀</p>
+  </div>
+
+  <div class="playground">
+
+    <div class="topbar">
+
+      <select class="language">
+        <option>C</option>
+        <option>C++</option>
+        <option>Python</option>
+      </select>
+
+      <div class="buttons">
+        <button class="run" onclick="runCode()">▶ Run</button>
+        <button class="clear" onclick="clearCode()">Clear</button>
+      </div>
+
+    </div>
+
+    <textarea id="code">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    int b = 20;
+
+    int sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}</textarea>
+
+    <h3 class="output-title">Output</h3>
+
+    <div id="output">Click "Run" to see the output.</div>
+
+    <div class="note">
+      💡 <b>Tip:</b> Abhi ye playground interface ready kar raha hai.
+      Next step me hum isme actual code execution add karenge, jisse
+      student code likhkar output dekh sakega.
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 PS CSE HUB • Learn • Code • Build 🚀
+</footer>
+
+<script>
+
+function runCode() {
+  document.getElementById("output").innerText =
+    "Code execution engine will be connected in the next step 🚀";
+}
+
+function clearCode() {
+  document.getElementById("code").value = "";
+  document.getElementById("output").innerText =
+    "Editor cleared. Write your code and click Run.";
+}
+
+</script>
+
+</body>
+  </html>
