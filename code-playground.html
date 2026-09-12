@@ -1,253 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Code Playground | PS CSE HUB</title>
 
-  <title>Code Playground | PS CSE HUB</title>
+<link rel="icon" type="image/png" href="ps-cse-hub-favicon.png">
 
-  <meta name="description"
-        content="Practice C programming online with PS CSE HUB Code Playground. Write code, run it, and learn programming easily.">
+<style>
+*{
+  box-sizing:border-box;
+}
 
-  <link rel="icon" type="image/png" href="ps-cse-hub-favicon.png">
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#07111f;
+  color:white;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+header{
+  background:#050d18;
+  padding:16px 20px;
+  border-bottom:1px solid #24415f;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #07111f;
-      color: white;
-      min-height: 100vh;
-    }
+.logo{
+  color:#39a7ff;
+  font-size:22px;
+  font-weight:bold;
+}
 
-    header {
-      background: #050d18;
-      padding: 18px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #16304a;
-    }
+.home{
+  color:white;
+  text-decoration:none;
+  background:#1688ff;
+  padding:9px 15px;
+  border-radius:20px;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #39a7ff;
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:35px 18px;
+}
 
-    .back {
-      color: white;
-      text-decoration: none;
-      background: #1688ff;
-      padding: 9px 15px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+.hero{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-    .back:hover {
-      background: #39a7ff;
-    }
+.hero h1{
+  font-size:34px;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: 30px auto;
-    }
+.hero h1 span{
+  color:#39a7ff;
+}
 
-    .hero {
-      text-align: center;
-      margin-bottom: 25px;
-    }
+.hero p{
+  color:#aebed0;
+}
 
-    .hero h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+.playground{
+  background:#0c1b2d;
+  border:1px solid #24415f;
+  border-radius:16px;
+  padding:20px;
+}
 
-    .hero h1 span {
-      color: #39a7ff;
-    }
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
 
-    .hero p {
-      color: #b9c7d6;
-      font-size: 16px;
-    }
+select{
+  background:#07111f;
+  color:white;
+  border:1px solid #31506d;
+  padding:10px;
+  border-radius:8px;
+}
 
-    .playground {
-      background: #0b1929;
-      border: 1px solid #1b3a57;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
-    }
+button{
+  border:0;
+  padding:10px 17px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.run{
+  background:#1688ff;
+  color:white;
+}
 
-    .language {
-      background: #07111f;
-      color: white;
-      border: 1px solid #31506d;
-      padding: 10px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+.clear{
+  background:#26384b;
+  color:white;
+}
 
-    .buttons {
-      display: flex;
-      gap: 8px;
-    }
+textarea{
+  width:100%;
+  min-height:320px;
+  background:#050d18;
+  color:#e5f4ff;
+  border:1px solid #31506d;
+  border-radius:10px;
+  padding:16px;
+  font-family:Consolas,monospace;
+  font-size:15px;
+  line-height:1.6;
+  resize:vertical;
+  outline:none;
+}
 
-    button {
-      border: none;
-      cursor: pointer;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+textarea:focus{
+  border-color:#39a7ff;
+}
 
-    .run {
-      background: #1688ff;
-      color: white;
-    }
+.output-title{
+  color:#39a7ff;
+  margin-top:22px;
+}
 
-    .run:hover {
-      background: #39a7ff;
-    }
+.output{
+  min-height:90px;
+  background:#050d18;
+  border:1px solid #31506d;
+  border-radius:10px;
+  padding:15px;
+  font-family:Consolas,monospace;
+  white-space:pre-wrap;
+}
 
-    .clear {
-      background: #26384b;
-      color: white;
-    }
+.practice{
+  margin-top:35px;
+}
 
-    .clear:hover {
-      background: #344d65;
-    }
+.practice h2{
+  text-align:center;
+  color:#4db2ff;
+}
 
-    textarea {
-      width: 100%;
-      min-height: 330px;
-      resize: vertical;
-      background: #050d18;
-      color: #e7f3ff;
-      border: 1px solid #31506d;
-      border-radius: 10px;
-      padding: 18px;
-      font-family: Consolas, monospace;
-      font-size: 15px;
-      line-height: 1.6;
-      outline: none;
-    }
+.question{
+  background:#0c1b2d;
+  border:1px solid #24415f;
+  border-radius:14px;
+  padding:20px;
+  margin-top:18px;
+}
 
-    textarea:focus {
-      border-color: #39a7ff;
-    }
+.question pre{
+  background:#050d18;
+  padding:15px;
+  border-radius:8px;
+  overflow:auto;
+  color:#dff3ff;
+}
 
-    .output-title {
-      margin-top: 20px;
-      margin-bottom: 8px;
-      color: #39a7ff;
-      font-size: 18px;
-    }
+.option{
+  width:100%;
+  margin-top:8px;
+  background:#132a43;
+  color:white;
+  text-align:left;
+}
 
-    #output {
-      background: #050d18;
-      border: 1px solid #31506d;
-      border-radius: 10px;
-      min-height: 100px;
-      padding: 15px;
-      color: #d9f0ff;
-      font-family: Consolas, monospace;
-      white-space: pre-wrap;
-    }
+.option:hover{
+  background:#1d4f7a;
+}
 
-    .note {
-      margin-top: 18px;
-      padding: 14px;
-      background: #101f31;
-      border-radius: 10px;
-      color: #b9c7d6;
-      font-size: 14px;
-      line-height: 1.5;
-    }
+.correct{
+  background:#176b45 !important;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #8295a8;
-      font-size: 13px;
-    }
+.wrong{
+  background:#7a2630 !important;
+}
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 27px;
-      }
+.result{
+  margin-top:12px;
+  font-weight:bold;
+}
 
-      .container {
-        width: 94%;
-      }
+.xp{
+  text-align:center;
+  margin:25px 0;
+  padding:12px;
+  border:1px solid #39a7ff;
+  border-radius:25px;
+  color:#4db2ff;
+  background:#132a43;
+}
 
-      textarea {
-        min-height: 280px;
-      }
+footer{
+  text-align:center;
+  padding:30px;
+  color:#8192a6;
+}
 
-      .buttons {
-        width: 100%;
-      }
+@media(max-width:600px){
+  .hero h1{
+    font-size:27px;
+  }
 
-      button {
-        flex: 1;
-      }
-    }
-  </style>
+  textarea{
+    min-height:280px;
+  }
+
+  .toolbar{
+    align-items:stretch;
+  }
+
+  .toolbar button{
+    flex:1;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">PS CSE HUB</div>
-  <a href="index.html" class="back">← Home</a>
+
+<div class="logo">
+💻 PS CSE HUB
+</div>
+
+<a href="index.html" class="home">
+← Home
+</a>
+
 </header>
 
 <div class="container">
 
-  <div class="hero">
-    <h1>💻 <span>Code Playground</span></h1>
-    <p>Write code • Practice • Learn • Build 🚀</p>
-  </div>
+<section class="hero">
 
-  <div class="playground">
+<h1>
+🚀 <span>C Code Playground</span>
+</h1>
 
-    <div class="topbar">
+<p>
+Practice C programming and test your logic.
+</p>
 
-      <select class="language">
-        <option>C</option>
-        <option>C++</option>
-        <option>Python</option>
-      </select>
+</section>
 
-      <div class="buttons">
-        <button class="run" onclick="runCode()">▶ Run</button>
-        <button class="clear" onclick="clearCode()">Clear</button>
-      </div>
 
-    </div>
+<div class="playground">
 
-    <textarea id="code">#include &lt;stdio.h&gt;
+<div class="toolbar">
+
+<select>
+<option>C Programming</option>
+</select>
+
+<div>
+<button class="run" onclick="runCode()">▶ Run</button>
+<button class="clear" onclick="clearCode()">Clear</button>
+</div>
+
+</div>
+
+
+<textarea id="code">#include &lt;stdio.h&gt;
 
 int main() {
+
     int a = 10;
     int b = 20;
 
@@ -258,38 +287,210 @@ int main() {
     return 0;
 }</textarea>
 
-    <h3 class="output-title">Output</h3>
 
-    <div id="output">Click "Run" to see the output.</div>
+<h3 class="output-title">
+📤 Output
+</h3>
 
-    <div class="note">
-      💡 <b>Tip:</b> Abhi ye playground interface ready kar raha hai.
-      Next step me hum isme actual code execution add karenge, jisse
-      student code likhkar output dekh sakega.
-    </div>
-
-  </div>
+<div class="output" id="output">
+Click ▶ Run to check your code.
+</div>
 
 </div>
 
+
+<div class="xp" id="xp">
+🏆 XP: 0
+</div>
+
+
+<section class="practice">
+
+<h2>🧠 CSE Practice Challenge</h2>
+
+
+<div class="question">
+
+<h3>Question 1 — Guess the Output</h3>
+
+<pre>int a = 5;
+printf("%d", ++a);</pre>
+
+<button class="option" onclick="answer(this,false)">
+A) 5
+</button>
+
+<button class="option" onclick="answer(this,true)">
+B) 6
+</button>
+
+<button class="option" onclick="answer(this,false)">
+C) 4
+</button>
+
+<button class="option" onclick="answer(this,false)">
+D) Error
+</button>
+
+<div class="result"></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Question 2 — C Programming</h3>
+
+<pre>int a = 10;
+int b = 3;
+
+printf("%d", a % b);</pre>
+
+<button class="option" onclick="answer(this,false)">
+A) 3
+</button>
+
+<button class="option" onclick="answer(this,true)">
+B) 1
+</button>
+
+<button class="option" onclick="answer(this,false)">
+C) 0
+</button>
+
+<button class="option" onclick="answer(this,false)">
+D) 10
+</button>
+
+<div class="result"></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Question 3 — Find the Bug 🐛</h3>
+
+<pre>int a = 10
+printf("%d", a);</pre>
+
+<button class="option" onclick="answer(this,true)">
+A) Missing ;
+</button>
+
+<button class="option" onclick="answer(this,false)">
+B) printf is wrong
+</button>
+
+<button class="option" onclick="answer(this,false)">
+C) int is wrong
+</button>
+
+<button class="option" onclick="answer(this,false)">
+D) No error
+</button>
+
+<div class="result"></div>
+
+</div>
+
+</section>
+
+</div>
+
+
 <footer>
-  © 2026 PS CSE HUB • Learn • Code • Build 🚀
+© 2026 PS CSE HUB • Learn • Code • Build 🚀
 </footer>
+
 
 <script>
 
-function runCode() {
-  document.getElementById("output").innerText =
-    "Code execution engine will be connected in the next step 🚀";
+let xp = 0;
+
+function runCode(){
+
+  let code = document.getElementById("code").value;
+  let output = document.getElementById("output");
+
+  if(code.trim() === ""){
+    output.innerText = "⚠️ Please write some code first.";
+    return;
+  }
+
+  /*
+    This is a practice simulator.
+    It detects the sample program's output.
+  */
+
+  if(
+    code.includes('int a = 10') &&
+    code.includes('int b = 20') &&
+    code.includes('printf("Sum = %d", sum)')
+  ){
+    output.innerText = "Sum = 30";
+    addXP(10);
+  }
+
+  else{
+    output.innerText =
+      "✅ Code received!\n\n" +
+      "This playground is currently a C practice simulator.\n" +
+      "Try modifying the sample program and practice your logic.";
+  }
 }
 
-function clearCode() {
+
+function clearCode(){
+
   document.getElementById("code").value = "";
+
   document.getElementById("output").innerText =
-    "Editor cleared. Write your code and click Run.";
+    "Editor cleared. Write your C code.";
+
+}
+
+
+function answer(button, correct){
+
+  let question = button.parentElement;
+  let result = question.querySelector(".result");
+
+  let buttons = question.querySelectorAll(".option");
+
+  buttons.forEach(function(btn){
+    btn.disabled = true;
+  });
+
+  if(correct){
+
+    button.classList.add("correct");
+
+    result.innerText = "✅ Correct! +10 XP";
+
+    addXP(10);
+
+  }else{
+
+    button.classList.add("wrong");
+
+    result.innerText = "❌ Wrong answer. Try the next challenge.";
+
+  }
+
+}
+
+
+function addXP(points){
+
+  xp += points;
+
+  document.getElementById("xp").innerText =
+    "🏆 XP: " + xp;
+
 }
 
 </script>
 
 </body>
-  </html>
+</html>
