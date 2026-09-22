@@ -673,6 +673,36 @@ footer strong{
     height:30px;
     display:block;
 }
+  /* ===== FLOATING MENU MAIN BUTTON ===== */
+
+.float-main{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#1688ff;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    z-index:10001;
+    box-shadow:0 5px 18px rgba(0,0,0,0.4);
+    cursor:pointer;
+    transition:transform 0.3s ease;
+}
+
+.float-main svg{
+    width:30px;
+    height:30px;
+    display:block;
+}
+
+.float-main.active{
+    transform:rotate(45deg);
+}
 
 
 </style>
@@ -680,6 +710,18 @@ footer strong{
 </head>
 
 <body>
+  <!-- Main Floating Menu Button -->
+<a href="javascript:void(0)"
+   class="float-main"
+   id="floatMain"
+   title="Open Menu">
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor"
+              d="M12 5v14M5 12h14"/>
+    </svg>
+
+</a>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/917307453683"
    class="whatsapp-btn"
@@ -2815,6 +2857,25 @@ searchInput.addEventListener("input", function () {
       <a href="${item.link}" class="btn">View Notes</a>
     </div>
   `).join("");
+});
+</script>
+  <script>
+const floatMain = document.getElementById("floatMain");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+const contactBtn = document.querySelector(".contact-btn");
+
+floatMain.addEventListener("click", function(){
+
+    floatMain.classList.toggle("active");
+
+    if(whatsappBtn.style.display === "flex"){
+        whatsappBtn.style.display = "none";
+        contactBtn.style.display = "none";
+    }else{
+        whatsappBtn.style.display = "flex";
+        contactBtn.style.display = "flex";
+    }
+
 });
 </script>
 
