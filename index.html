@@ -2839,6 +2839,23 @@ setInterval(function(){
     slides[currentSlide].classList.add("active");
 }, 4500);
 </script>
+  <script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showNextSlide(){
+
+    if(slides.length === 0) return;
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+}
+
+setInterval(showNextSlide, 4500);
+</script>
 
 </body>
 </html>
