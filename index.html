@@ -627,6 +627,43 @@ footer strong{
     height:30px;
     display:block;
 }
+  /* ===== PS CSE HUB HERO SLIDER ===== */
+
+.hero-slider{
+    width:100%;
+    overflow:hidden;
+    background:#07111f;
+    padding:20px 0;
+}
+
+.slides{
+    position:relative;
+    width:100%;
+    height:420px;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 0.8s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
 
 
 </style>
