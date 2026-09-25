@@ -2124,6 +2124,11 @@ study resources.
       <div class="feedback-icon">⭐</div>
 
       <h3>Have you used PS CSE HUB?</h3>
+      <div id="approved-feedbacks" class="approved-feedbacks">
+    <p style="text-align:center;color:#8fa8bf;">
+        Loading student feedback...
+    </p>
+</div>
 
       <p>
         Share your experience, suggestions or ideas with us.
@@ -2904,7 +2909,54 @@ searchInput.addEventListener("input", function () {
   `).join("");
 });
 </script>
-  
+<script>
+const feedbackAPI = "https://script.google.com/macros/s/AKfycbwAMuP_gHiLLj3k0b5p7Qh5mD7kL0kM_2LUopzb-09ChaPqGdcErZZZnv4cu4xkSeiSDg/exec";
+
+fetch(feedbackAPI)
+    .then(response => response.json())
+    .then(data => {
+
+        const container = document.getElementById("approved-feedbacks");
+
+        if (!data.length) {
+            container.innerHTML = "";
+            return;
+        }
+
+        container.innerHTML = data.map(item => {
+
+            const rating = Number(item.rating) || 0;
+            const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+
+            return `
+                <div class="feedback-card">
+
+                    <div class="stars">${stars}</div>
+
+                    <h4>${item.name}</h4>
+
+                    <div class="course">${item.course}</div>
+
+                    <div class="text">
+                        “${item.feedback}”
+                    </div>
+
+                </div>
+            `;
+
+        }).join("");
+
+    })
+    .catch(error => {
+        console.error("Feedback loading error:", error);
+
+        const container = document.getElementById("approved-feedbacks");
+
+        if (container) {
+            container.innerHTML = "";
+        }
+    });
+</script>  
 
 </body>
 </html>
