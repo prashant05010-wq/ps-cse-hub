@@ -683,6 +683,51 @@ footer strong{
     background:#39a7ff;
     transform:translateY(-2px);
 }
+  /* APPROVED FEEDBACK CARDS */
+
+.approved-feedbacks{
+    max-width:900px;
+    margin:35px auto 0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.feedback-card{
+    background:#0c1b2d;
+    border:1px solid #24415f;
+    border-radius:16px;
+    padding:22px;
+    text-align:left;
+}
+
+.feedback-card:hover{
+    border-color:#1688ff;
+}
+
+.feedback-card .stars{
+    color:#ffd54a;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.feedback-card h4{
+    color:#4db2ff;
+    margin:5px 0;
+    font-size:18px;
+}
+
+.feedback-card .course{
+    color:#8fa8bf;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.feedback-card .text{
+    color:#c3d1df;
+    font-size:14px;
+    line-height:1.6;
+}
 
 @media(max-width:600px){
     .feedback-box{
@@ -2859,6 +2904,7 @@ searchInput.addEventListener("input", function () {
   `).join("");
 });
 </script>
+  
 
 </body>
 </html>
