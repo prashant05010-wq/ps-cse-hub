@@ -627,6 +627,76 @@ footer strong{
     height:30px;
     display:block;
 }
+  /* =========================
+   STUDENT FEEDBACK
+========================= */
+
+.feedback-section{
+    background:#0a1727;
+}
+
+.feedback-box{
+    max-width:700px;
+    margin:auto;
+    padding:35px 25px;
+    text-align:center;
+    background:#0c1b2d;
+    border:1px solid #24415f;
+    border-radius:18px;
+    transition:0.3s ease;
+}
+
+.feedback-box:hover{
+    border-color:#1688ff;
+    box-shadow:0 10px 30px rgba(22,136,255,0.15);
+}
+
+.feedback-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.feedback-box h3{
+    color:#4db2ff;
+    font-size:23px;
+    margin:10px 0;
+}
+
+.feedback-box p{
+    color:#c3d1df;
+    max-width:550px;
+    margin:0 auto 25px;
+}
+
+.feedback-btn{
+    display:inline-block;
+    padding:13px 25px;
+    background:#1688ff;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.feedback-btn:hover{
+    background:#39a7ff;
+    transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+    .feedback-box{
+        padding:28px 18px;
+    }
+
+    .feedback-box h3{
+        font-size:20px;
+    }
+
+    .feedback-box p{
+        font-size:14px;
+    }
+}
 
 
 </style>
@@ -1991,6 +2061,40 @@ study resources.
 </div>
 
 </div>
+
+</section>
+  <!-- STUDENT FEEDBACK -->
+
+<section class="feedback-section">
+
+  <div class="container">
+
+    <div class="title">
+      <h2>💬 Student Feedback</h2>
+      <p>Help us improve PS CSE HUB for students.</p>
+    </div>
+
+    <div class="feedback-box">
+
+      <div class="feedback-icon">⭐</div>
+
+      <h3>Have you used PS CSE HUB?</h3>
+
+      <p>
+        Share your experience, suggestions or ideas with us.
+        Your feedback helps us make PS CSE HUB better.
+      </p>
+
+      <a href="https://forms.gle/A5oneuEMdCWJcBnz7"
+         class="feedback-btn"
+         target="_blank"
+         rel="noopener">
+        💬 Give Your Feedback
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
